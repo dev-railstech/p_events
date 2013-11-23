@@ -1,0 +1,12 @@
+development:
+  bucket:  taskfishmvp-a
+  access_key_id: AKIAJXLQUJV5SNTUN3RA
+  secret_access_key: 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
+test:
+  bucket: taskfishmvp-a
+  access_key_id: AKIAJXLQUJV5SNTUN3RA
+  secret_access_key: 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
+production:
+  bucket: taskfishmvp-a
+  access_key_id: AKIAJXLQUJV5SNTUN3RA
+  secret_access_key: 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

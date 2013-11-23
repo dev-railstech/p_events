@@ -1,0 +1,21 @@
+defaults: &defaults
+  host: 127.0.0.1
+  port: 27017   #27017
+  options:
+    w: 1
+    pool_size: 1
+    slave_ok: false
+    ssl: false
+
+development:
+  <<: *defaults
+  database: taskfishmvp_a_development
+
+test:
+  <<: *defaults
+  database: taskfishmvp_a_test
+  w: 0
+
+# set these environment variables on your prod server
+production:
+  uri: <%= ENV['MONGOHQ_URL'] %>
