@@ -23,4 +23,22 @@ class Event
 
   belongs_to :user
 
+  def organizer
+    self.user
+  end
+
+  def participants
+    participants = self.users
+    participants << self.user
+    participants
+  end
+
+  def male_participants
+    self.participants.all(:sex => "m")
+  end
+
+  def female_participants
+    self.participants.all(:sex => "f")
+  end
+
 end
