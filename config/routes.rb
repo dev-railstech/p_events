@@ -1,24 +1,29 @@
 TaskfishmvpA::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  namespace :api do
+    namespace :v1 do
 
-  post 'users/create' => 'user#create'
+      post 'users/create' => 'user#create'
 
-  get 'users/:user_id/events' => 'event#index'
-  get 'users/:user_id/events/:event_id' => 'event#show'
-  delete 'users/:user_id/events/:event_id' => 'event#remove'
-  post 'users/:user_id/events/create' => 'event#create'
-  post 'users/:user_id/events/:event_id/invite' => 'event#invite'
+      get 'users/:user_id/events' => 'event#index'
+      get 'users/:user_id/events/:event_id' => 'event#show'
+      delete 'users/:user_id/events/:event_id' => 'event#remove'
+      post 'users/:user_id/events/create' => 'event#create'
+      post 'users/:user_id/events/:event_id/invite' => 'event#invite'
 
-  post 'users/:user_id/events/:event_id/comments/create' => 'comment#create_event_comment'
-  get 'users/:user_id/events/:event_id/comments' => 'comment#get_event_comments'
-  post 'users/:user_id/events/:event_id/pictures/:picture_id/comments/create' => 'comment#create_picture_comment'
-  get 'users/:user_id/events/:event_id/pictures/:picture_id/comments' => 'comment#get_picture_comment'
+      post 'users/:user_id/events/:event_id/comments/create' => 'comment#create_event_comment'
+      get 'users/:user_id/events/:event_id/comments' => 'comment#get_event_comments'
+      post 'users/:user_id/events/:event_id/pictures/:picture_id/comments/create' => 'comment#create_picture_comment'
+      get 'users/:user_id/events/:event_id/pictures/:picture_id/comments' => 'comment#get_picture_comment'
 
-  post 'users/:user_id/events/:event_id/pictures/create' => 'picture#create'
-  get 'users/:user_id/events/:event_id/pictures' => 'picture#index'
-  get 'users/:user_id/events/:event_id/pictures/:picture_id' => 'picture#show'
-  delete 'users/:user_id/events/:event_id/pictures/:picture_id' => 'picture#remove'
+      post 'users/:user_id/events/:event_id/pictures/create' => 'picture#create'
+      get 'users/:user_id/events/:event_id/pictures' => 'picture#index'
+      get 'users/:user_id/events/:event_id/pictures/:picture_id' => 'picture#show'
+      delete 'users/:user_id/events/:event_id/pictures/:picture_id' => 'picture#remove'
+
+    end
+  end
 
 
   # You can have the root of your site routed with "root"
