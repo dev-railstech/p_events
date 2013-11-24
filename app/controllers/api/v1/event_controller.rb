@@ -55,17 +55,19 @@ module Api
 
         user = User.find_by_id2 params[:user_id].to_i
 
-
-        if user.present?
-          @event = user.events.new
+       if user.present?
+          @event = Event.new
           @event.title = params[:title]
           @event.venue = params[:venue]
           @event.event_date = params[:event_date]
           @event.latitude = params[:latitude]
           @event.longitude = params[:longitude]
           @event.created_by_name = user.name
+          @event.user = user
           respond_to do |format|
             if @event.save
+              user.events << @event
+              user.save
               format.json { render :json => @event }
             else
               format.json { render :json => { :message => 'Invalid data' , :status => 123 } }
@@ -87,9 +89,14 @@ module Api
 
         if event.present?
           params[:user_ids].each do |user_id|
-            u = User.find_by_id2 user_id.to_i
-            event.users << u
+            user_invited = User.find_by_id2 user_id.to_i
+            if user_invited.present?
+              user_invited.events << event
+              event.users << user_invited
+              user_invited.save
+            end
           end
+          event.save
           response = { :message => 'User invited successfully' , :status => 0 } if event.save
         end
 

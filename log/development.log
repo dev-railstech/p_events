@@ -205,3 +205,251 @@ Processing by Api::V1::EventController#index as JSON
 MONGODB (46.9ms) taskfishmvp_a_development['users'].find({:id2=>1}).limit(-1)
 MONGODB (31.3ms) taskfishmvp_a_development['events'].find({:user_id=>BSON::ObjectId('5291a4a1ea39a40a80000001')})
 Completed 200 OK in 297ms (Views: 46.9ms)
+
+
+Started GET "/api/v1/users/5/events.json" for 192.168.219.128 at 2013-11-24 18:43:39 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"5"}
+MONGODB (68.0ms) taskfishmvp_a_development['users'].find({:id2=>5}).limit(-1)
+Completed 200 OK in 126ms (Views: 25.0ms)
+
+
+Started GET "/api/v1/users/5/events.json" for 192.168.219.128 at 2013-11-24 18:46:42 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"5"}
+MONGODB (12.0ms) taskfishmvp_a_development['users'].find({:id2=>5}).limit(-1)
+Completed 200 OK in 15ms (Views: 1.0ms)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (12.2ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+MONGODB (34.0ms) taskfishmvp_a_development['$cmd'].find({"count"=>"sequences", "query"=>{"seq_name"=>"Event"}, "fields"=>nil}).limit(-1)
+MONGODB (158.3ms) taskfishmvp_a_development['sequences'].insert([{"seq_name"=>"Event", "number"=>0, :_id=>BSON::ObjectId('52920d89ea39a40054000002')}])
+MONGODB (63.5ms) taskfishmvp_a_development['$cmd'].find({:findandmodify=>"sequences", "query"=>{"seq_name"=>"Event"}, "update"=>{"$inc"=>{"number"=>1}}, "new"=>true}).limit(-1)
+MONGODB (64.1ms) taskfishmvp_a_development['events'].insert([{"_id"=>BSON::ObjectId('52920d2bea39a40054000001'), "title"=>"Increment party", "event_date"=>2013-11-24 00:00:00 UTC, "user_ids"=>[], "created_at"=>2013-11-24 14:30:33 UTC, "updated_at"=>2013-11-24 14:30:33 UTC, "id2"=>1, "user_id"=>nil}])
+MONGODB (11.2ms) taskfishmvp_a_development['users'].find({:id2=>5}).limit(-1)
+MONGODB (11.2ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (11.2ms) taskfishmvp_a_development['users'].find({:id2=>3}).limit(-1)
+MONGODB (11.2ms) taskfishmvp_a_development['users'].find({:id2=>2}).limit(-1)
+MONGODB (12.4ms) taskfishmvp_a_development['users'].find({:id2=>1}).limit(-1)
+MONGODB (11.7ms) taskfishmvp_a_development['users'].find({}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['events'].find({}).limit(-1)
+MONGODB (22.0ms) taskfishmvp_a_development['events'].update({:_id=>BSON::ObjectId('52920d2bea39a40054000001')}, {"_id"=>BSON::ObjectId('52920d2bea39a40054000001'), "title"=>"Increment party", "event_date"=>2013-11-24 00:00:00 UTC, "user_ids"=>[], "created_at"=>2013-11-24 14:30:33 UTC, "updated_at"=>2013-11-24 14:32:42 UTC, "id2"=>1, "user_id"=>BSON::ObjectId('5291a4a1ea39a40a80000001')})
+MONGODB (12.0ms) taskfishmvp_a_development['events'].find({:user_id=>BSON::ObjectId('5291a4a1ea39a40a80000001')})
+MONGODB (192.8ms) taskfishmvp_a_development['users'].find({:email=>"xxx@yyy.com", :_id=>{:$ne=>BSON::ObjectId('5291a4a1ea39a40a80000001')}}, {:_id=>1}).limit(-1)
+MONGODB (11.4ms) taskfishmvp_a_development['users'].update({:_id=>BSON::ObjectId('5291a4a1ea39a40a80000001')}, {"_id"=>BSON::ObjectId('5291a4a1ea39a40a80000001'), "name"=>"name", "age"=>20, "sex"=>"m", "country"=>"us", "city"=>"wk", "latitude"=>37.785834, "longitude"=>-122.406417, "email"=>"xxx@yyy.com", "fb_access_token"=>"CAAH0aKqLGGsBAOK27Y3MAIMSG8eMMaG56yiqNwKblczOZB7ieRFvDHXuhS0H0ZBxorLSZBMOmJ5QfiB9r5IObbjJatmCFcdzL5sfIYRZBxklvH1wPfUIyRHFGAm5ZBL7givkHNHAsN4GSqCQ0UwoYiBh0hJPZBEHOdQGCMmVn8ZCKUPasze00TA&expires", "created_at"=>2013-11-24 07:02:58 UTC, "updated_at"=>2013-11-24 14:33:29 UTC, "id2"=>1})
+MONGODB (11.4ms) taskfishmvp_a_development['events'].update({:_id=>BSON::ObjectId('52920d2bea39a40054000001')}, {"_id"=>BSON::ObjectId('52920d2bea39a40054000001'), "title"=>"Increment party", "event_date"=>2013-11-24 00:00:00 UTC, "user_ids"=>[], "created_at"=>2013-11-24 14:30:33 UTC, "updated_at"=>2013-11-24 14:33:29 UTC, "id2"=>1, "user_id"=>BSON::ObjectId('5291a4a1ea39a40a80000001')})
+MONGODB (11.7ms) taskfishmvp_a_development['events'].find({}).limit(-1)
+MONGODB (11.7ms) taskfishmvp_a_development['users'].find({:_id=>BSON::ObjectId('5291a4a1ea39a40a80000001')}).limit(-1)
+MONGODB (11.8ms) taskfishmvp_a_development['events'].update({:_id=>BSON::ObjectId('52920d2bea39a40054000001')}, {"_id"=>BSON::ObjectId('52920d2bea39a40054000001'), "title"=>"Increment party", "venue"=>"lhr", "event_date"=>2013-11-24 00:00:00 UTC, "created_by_name"=>"name", "user_ids"=>[], "created_at"=>2013-11-24 14:30:33 UTC, "updated_at"=>2013-11-24 14:34:45 UTC, "id2"=>1, "user_id"=>BSON::ObjectId('5291a4a1ea39a40a80000001')})
+
+
+Started GET "/api/v1/users/5/events.json" for 192.168.219.128 at 2013-11-24 19:52:29 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"5"}
+MONGODB (11.0ms) taskfishmvp_a_development['users'].find({:id2=>5}).limit(-1)
+Completed 200 OK in 14ms (Views: 1.0ms)
+
+
+Started GET "/api/v1/users/1/events.json" for 192.168.219.128 at 2013-11-24 19:54:15 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"1"}
+MONGODB (51.0ms) taskfishmvp_a_development['users'].find({:id2=>1}).limit(-1)
+MONGODB (11.0ms) taskfishmvp_a_development['events'].find({:user_id=>BSON::ObjectId('5291a4a1ea39a40a80000001')})
+Completed 200 OK in 171ms (Views: 74.0ms)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (34.0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+
+
+Started GET "/api/v1/users/1/events.json" for 192.168.219.128 at 2013-11-24 22:35:44 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"1"}
+MONGODB (25.0ms) taskfishmvp_a_development['users'].find({:id2=>1}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['events'].find({:user_id=>BSON::ObjectId('5291a4a1ea39a40a80000001')})
+Completed 200 OK in 574ms (Views: 120.4ms)
+
+
+Started GET "/api/v1/users/1/events.json" for 192.168.219.128 at 2013-11-24 22:49:42 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"1"}
+MONGODB (48.0ms) taskfishmvp_a_development['users'].find({:id2=>1}).limit(-1)
+MONGODB (2.0ms) taskfishmvp_a_development['events'].find({:user_id=>BSON::ObjectId('5291a4a1ea39a40a80000001')})
+Completed 200 OK in 60ms (Views: 8.0ms)
+
+
+Started GET "/api/v1/users/1/events.json" for 192.168.219.128 at 2013-11-24 22:53:33 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"1"}
+MONGODB (12.0ms) taskfishmvp_a_development['users'].find({:id2=>1}).limit(-1)
+MONGODB (11.0ms) taskfishmvp_a_development['events'].find({:user_id=>BSON::ObjectId('5291a4a1ea39a40a80000001')})
+Completed 200 OK in 32ms (Views: 16.0ms)
+
+
+Started GET "/api/v1/users/1/events.json" for 192.168.219.128 at 2013-11-24 22:54:52 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"1"}
+MONGODB (12.0ms) taskfishmvp_a_development['users'].find({:id2=>1}).limit(-1)
+MONGODB (11.0ms) taskfishmvp_a_development['events'].find({:user_id=>BSON::ObjectId('5291a4a1ea39a40a80000001')})
+Completed 200 OK in 31ms (Views: 15.9ms)
+
+
+Started POST "/api/v1/users/1/events/create.json" for 192.168.219.128 at 2013-11-24 22:55:30 +0500
+Processing by Api::V1::EventController#create as JSON
+  Parameters: {"title"=>"TTY", "venue"=>"Rrff", "event_date"=>"09/09/2013", "latitude"=>"37.785834", "longitude"=>"-122.406417", "user_id"=>"1"}
+MONGODB (12.0ms) taskfishmvp_a_development['users'].find({:id2=>1}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['$cmd'].find({"count"=>"sequences", "query"=>{"seq_name"=>"Event"}, "fields"=>nil}).limit(-1)
+MONGODB (118.7ms) taskfishmvp_a_development['$cmd'].find({:findandmodify=>"sequences", "query"=>{"seq_name"=>"Event"}, "update"=>{"$inc"=>{"number"=>1}}, "new"=>true}).limit(-1)
+MONGODB (54.2ms) taskfishmvp_a_development['events'].insert([{"_id"=>BSON::ObjectId('52923d92ea39a40f0c000001'), "title"=>"TTY", "venue"=>"Rrff", "event_date"=>2013-09-09 00:00:00 UTC, "latitude"=>37.785834, "longitude"=>-122.406417, "created_by_name"=>"name", "user_ids"=>[], "created_at"=>2013-11-24 17:55:30 UTC, "updated_at"=>2013-11-24 17:55:30 UTC, "id2"=>2, "user_id"=>nil}])
+Completed 200 OK in 438ms (Views: 3.0ms)
+
+
+Started GET "/api/v1/users/1/events.json" for 192.168.219.128 at 2013-11-24 22:58:35 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"1"}
+MONGODB (12.0ms) taskfishmvp_a_development['users'].find({:id2=>1}).limit(-1)
+MONGODB (52.0ms) taskfishmvp_a_development['events'].find({:user_id=>BSON::ObjectId('5291a4a1ea39a40a80000001')})
+Completed 200 OK in 74ms (Views: 58.0ms)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (11.0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+
+
+Started GET "/api/v1/users/1/events.json" for 127.0.0.1 at 2013-11-24 23:01:19 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"1"}
+MONGODB (11.0ms) taskfishmvp_a_development['users'].find({:id2=>1}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['events'].find({:user_id=>BSON::ObjectId('5291a4a1ea39a40a80000001')})
+Completed 200 OK in 34ms (Views: 20.0ms)
+MONGODB (83.8ms) taskfishmvp_a_development['events'].find({}).limit(-1).sort([[:_id, -1]])
+MONGODB (11.1ms) taskfishmvp_a_development['events'].find({}).limit(-1).sort([[:_id, -1]])
+MONGODB (189.6ms) taskfishmvp_a_development['users'].find({}).limit(-1).sort([[:_id, -1]])
+MONGODB (11.0ms) taskfishmvp_a_development['users'].find({}).limit(-1).sort([[:_id, -1]])
+MONGODB (11.0ms) taskfishmvp_a_development['events'].find({:user_id=>BSON::ObjectId('5291a4a1ea39a40a80000001')})
+MONGODB (12.0ms) taskfishmvp_a_development['users'].find({}).limit(-1).sort([[:_id, -1]])
+MONGODB (11.1ms) taskfishmvp_a_development['events'].find({:user_id=>BSON::ObjectId('5291a4a1ea39a40a80000001')})
+MONGODB (11.1ms) taskfishmvp_a_development['events'].find({}).limit(-1).sort([[:_id, -1]])
+MONGODB (53.4ms) taskfishmvp_a_development['events'].update({:_id=>BSON::ObjectId('52923d92ea39a40f0c000001')}, {"_id"=>BSON::ObjectId('52923d92ea39a40f0c000001'), "title"=>"TTY", "venue"=>"Rrff", "event_date"=>2013-09-09 00:00:00 UTC, "latitude"=>37.785834, "longitude"=>-122.406417, "created_by_name"=>"name", "user_ids"=>[], "created_at"=>2013-11-24 17:55:30 UTC, "updated_at"=>2013-11-24 18:05:00 UTC, "id2"=>2, "user_id"=>BSON::ObjectId('5291a4a1ea39a40a80000001')})
+MONGODB (93.0ms) taskfishmvp_a_development['users'].find({:email=>"xxx@yyy.com", :_id=>{:$ne=>BSON::ObjectId('5291a4a1ea39a40a80000001')}}, {:_id=>1}).limit(-1)
+MONGODB (12.2ms) taskfishmvp_a_development['users'].update({:_id=>BSON::ObjectId('5291a4a1ea39a40a80000001')}, {"_id"=>BSON::ObjectId('5291a4a1ea39a40a80000001'), "name"=>"name", "age"=>20, "sex"=>"m", "country"=>"us", "city"=>"wk", "latitude"=>37.785834, "longitude"=>-122.406417, "email"=>"xxx@yyy.com", "fb_access_token"=>"CAAH0aKqLGGsBAOK27Y3MAIMSG8eMMaG56yiqNwKblczOZB7ieRFvDHXuhS0H0ZBxorLSZBMOmJ5QfiB9r5IObbjJatmCFcdzL5sfIYRZBxklvH1wPfUIyRHFGAm5ZBL7givkHNHAsN4GSqCQ0UwoYiBh0hJPZBEHOdQGCMmVn8ZCKUPasze00TA&expires", "created_at"=>2013-11-24 07:02:58 UTC, "updated_at"=>2013-11-24 18:05:07 UTC, "id2"=>1})
+MONGODB (12.0ms) taskfishmvp_a_development['events'].find({:user_id=>BSON::ObjectId('5291a4a1ea39a40a80000001')})
+
+
+Started GET "/api/v1/users/1/events.json" for 192.168.219.128 at 2013-11-24 23:06:21 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"1"}
+MONGODB (11.0ms) taskfishmvp_a_development['users'].find({:id2=>1}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['events'].find({:user_id=>BSON::ObjectId('5291a4a1ea39a40a80000001')})
+Completed 200 OK in 148ms (Views: 64.1ms)
+
+
+Started POST "/api/v1/users/1/events/create.json" for 192.168.219.128 at 2013-11-24 23:06:56 +0500
+Processing by Api::V1::EventController#create as JSON
+  Parameters: {"title"=>"Hmmm", "venue"=>"Hmmmm", "event_date"=>"08/08/2013", "latitude"=>"37.785834", "longitude"=>"-122.406417", "user_id"=>"1"}
+MONGODB (52.0ms) taskfishmvp_a_development['users'].find({:id2=>1}).limit(-1)
+Completed 500 Internal Server Error in 62ms
+
+NameError (uninitialized constant Api::V1::EventController::Events):
+  app/controllers/api/v1/event_controller.rb:59:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (135.1ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (296.2ms)
+
+
+Started POST "/api/v1/users/1/events/create.json" for 192.168.219.128 at 2013-11-24 23:07:00 +0500
+Processing by Api::V1::EventController#create as JSON
+  Parameters: {"title"=>"Hmmm", "venue"=>"Hmmmm", "event_date"=>"08/08/2013", "latitude"=>"37.785834", "longitude"=>"-122.406417", "user_id"=>"1"}
+MONGODB (12.1ms) taskfishmvp_a_development['users'].find({:id2=>1}).limit(-1)
+Completed 500 Internal Server Error in 21ms
+
+NameError (uninitialized constant Api::V1::EventController::Events):
+  app/controllers/api/v1/event_controller.rb:59:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (79.1ms)
+
+
+Started POST "/api/v1/users/1/events/create.json" for 192.168.219.128 at 2013-11-24 23:07:04 +0500
+Processing by Api::V1::EventController#create as JSON
+  Parameters: {"title"=>"Hmmm", "venue"=>"Hmmmm", "event_date"=>"08/08/2013", "latitude"=>"37.785834", "longitude"=>"-122.406417", "user_id"=>"1"}
+MONGODB (11.0ms) taskfishmvp_a_development['users'].find({:id2=>1}).limit(-1)
+Completed 500 Internal Server Error in 24ms
+
+NameError (uninitialized constant Api::V1::EventController::Events):
+  app/controllers/api/v1/event_controller.rb:59:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (85.1ms)
+
+
+Started POST "/api/v1/users/1/events/create.json" for 192.168.219.128 at 2013-11-24 23:07:46 +0500
+Processing by Api::V1::EventController#create as JSON
+  Parameters: {"title"=>"Hmmm", "venue"=>"Hmmmm", "event_date"=>"08/08/2013", "latitude"=>"37.785834", "longitude"=>"-122.406417", "user_id"=>"1"}
+MONGODB (12.0ms) taskfishmvp_a_development['users'].find({:id2=>1}).limit(-1)
+MONGODB (55.1ms) taskfishmvp_a_development['$cmd'].find({"count"=>"sequences", "query"=>{"seq_name"=>"Event"}, "fields"=>nil}).limit(-1)
+MONGODB (11.0ms) taskfishmvp_a_development['$cmd'].find({:findandmodify=>"sequences", "query"=>{"seq_name"=>"Event"}, "update"=>{"$inc"=>{"number"=>1}}, "new"=>true}).limit(-1)
+MONGODB (11.0ms) taskfishmvp_a_development['events'].insert([{"_id"=>BSON::ObjectId('52924073ea39a40f0c000002'), "title"=>"Hmmm", "venue"=>"Hmmmm", "event_date"=>2013-08-08 00:00:00 UTC, "latitude"=>37.785834, "longitude"=>-122.406417, "created_by_name"=>"name", "user_ids"=>[], "created_at"=>2013-11-24 18:07:47 UTC, "updated_at"=>2013-11-24 18:07:47 UTC, "id2"=>3, "user_id"=>nil}])
+MONGODB (11.0ms) taskfishmvp_a_development['events'].update({:_id=>BSON::ObjectId('52924073ea39a40f0c000002')}, {"_id"=>BSON::ObjectId('52924073ea39a40f0c000002'), "title"=>"Hmmm", "venue"=>"Hmmmm", "event_date"=>2013-08-08 00:00:00 UTC, "latitude"=>37.785834, "longitude"=>-122.406417, "created_by_name"=>"name", "user_ids"=>[], "created_at"=>2013-11-24 18:07:47 UTC, "updated_at"=>2013-11-24 18:07:47 UTC, "id2"=>3, "user_id"=>BSON::ObjectId('5291a4a1ea39a40a80000001')})
+Completed 500 Internal Server Error in 232ms
+
+NoMethodError (undefined method `save' for nil:NilClass):
+  app/controllers/api/v1/event_controller.rb:70:in `block in create'
+  app/controllers/api/v1/event_controller.rb:67:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (83.1ms)
+
+
+Started POST "/api/v1/users/1/events/create.json" for 192.168.219.128 at 2013-11-24 23:08:12 +0500
+Processing by Api::V1::EventController#create as JSON
+  Parameters: {"title"=>"Hmmm", "venue"=>"Hmmmm", "event_date"=>"08/08/2013", "latitude"=>"37.785834", "longitude"=>"-122.406417", "user_id"=>"1"}
+MONGODB (12.0ms) taskfishmvp_a_development['users'].find({:id2=>1}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['$cmd'].find({"count"=>"sequences", "query"=>{"seq_name"=>"Event"}, "fields"=>nil}).limit(-1)
+MONGODB (11.0ms) taskfishmvp_a_development['$cmd'].find({:findandmodify=>"sequences", "query"=>{"seq_name"=>"Event"}, "update"=>{"$inc"=>{"number"=>1}}, "new"=>true}).limit(-1)
+MONGODB (11.0ms) taskfishmvp_a_development['events'].insert([{"_id"=>BSON::ObjectId('5292408cea39a40f0c000003'), "title"=>"Hmmm", "venue"=>"Hmmmm", "event_date"=>2013-08-08 00:00:00 UTC, "latitude"=>37.785834, "longitude"=>-122.406417, "created_by_name"=>"name", "user_ids"=>[], "created_at"=>2013-11-24 18:08:12 UTC, "updated_at"=>2013-11-24 18:08:12 UTC, "id2"=>4, "user_id"=>nil}])
+MONGODB (11.0ms) taskfishmvp_a_development['events'].update({:_id=>BSON::ObjectId('5292408cea39a40f0c000003')}, {"_id"=>BSON::ObjectId('5292408cea39a40f0c000003'), "title"=>"Hmmm", "venue"=>"Hmmmm", "event_date"=>2013-08-08 00:00:00 UTC, "latitude"=>37.785834, "longitude"=>-122.406417, "created_by_name"=>"name", "user_ids"=>[], "created_at"=>2013-11-24 18:08:12 UTC, "updated_at"=>2013-11-24 18:08:12 UTC, "id2"=>4, "user_id"=>BSON::ObjectId('5291a4a1ea39a40a80000001')})
+MONGODB (12.0ms) taskfishmvp_a_development['users'].find({:email=>"xxx@yyy.com", :_id=>{:$ne=>BSON::ObjectId('5291a4a1ea39a40a80000001')}}, {:_id=>1}).limit(-1)
+MONGODB (55.0ms) taskfishmvp_a_development['users'].update({:_id=>BSON::ObjectId('5291a4a1ea39a40a80000001')}, {"_id"=>BSON::ObjectId('5291a4a1ea39a40a80000001'), "name"=>"name", "age"=>20, "sex"=>"m", "country"=>"us", "city"=>"wk", "latitude"=>37.785834, "longitude"=>-122.406417, "email"=>"xxx@yyy.com", "fb_access_token"=>"CAAH0aKqLGGsBAOK27Y3MAIMSG8eMMaG56yiqNwKblczOZB7ieRFvDHXuhS0H0ZBxorLSZBMOmJ5QfiB9r5IObbjJatmCFcdzL5sfIYRZBxklvH1wPfUIyRHFGAm5ZBL7givkHNHAsN4GSqCQ0UwoYiBh0hJPZBEHOdQGCMmVn8ZCKUPasze00TA&expires", "created_at"=>2013-11-24 07:02:58 UTC, "updated_at"=>2013-11-24 18:08:12 UTC, "id2"=>1})
+Completed 200 OK in 275ms (Views: 2.0ms)
+
+
+Started GET "/api/v1/users/1/events.json" for 192.168.219.128 at 2013-11-24 23:09:17 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"1"}
+MONGODB (11.0ms) taskfishmvp_a_development['users'].find({:id2=>1}).limit(-1)
+MONGODB (62.0ms) taskfishmvp_a_development['events'].find({:user_id=>BSON::ObjectId('5291a4a1ea39a40a80000001')})
+Completed 200 OK in 89ms (Views: 74.0ms)
+
+
+Started POST "/api/v1/users/1/events/create.json" for 192.168.219.128 at 2013-11-24 23:09:49 +0500
+Processing by Api::V1::EventController#create as JSON
+  Parameters: {"title"=>"qqqqqQQqqqq", "venue"=>"qqqqqqqQQqqqqQq", "event_date"=>"07/07/2013", "latitude"=>"37.785834", "longitude"=>"-122.406417", "user_id"=>"1"}
+MONGODB (12.0ms) taskfishmvp_a_development['users'].find({:id2=>1}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['$cmd'].find({"count"=>"sequences", "query"=>{"seq_name"=>"Event"}, "fields"=>nil}).limit(-1)
+MONGODB (11.0ms) taskfishmvp_a_development['$cmd'].find({:findandmodify=>"sequences", "query"=>{"seq_name"=>"Event"}, "update"=>{"$inc"=>{"number"=>1}}, "new"=>true}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['events'].insert([{"_id"=>BSON::ObjectId('529240edea39a40f0c000004'), "title"=>"qqqqqQQqqqq", "venue"=>"qqqqqqqQQqqqqQq", "event_date"=>2013-07-07 00:00:00 UTC, "latitude"=>37.785834, "longitude"=>-122.406417, "created_by_name"=>"name", "user_ids"=>[], "created_at"=>2013-11-24 18:09:49 UTC, "updated_at"=>2013-11-24 18:09:49 UTC, "id2"=>5, "user_id"=>nil}])
+MONGODB (39.0ms) taskfishmvp_a_development['events'].update({:_id=>BSON::ObjectId('529240edea39a40f0c000004')}, {"_id"=>BSON::ObjectId('529240edea39a40f0c000004'), "title"=>"qqqqqQQqqqq", "venue"=>"qqqqqqqQQqqqqQq", "event_date"=>2013-07-07 00:00:00 UTC, "latitude"=>37.785834, "longitude"=>-122.406417, "created_by_name"=>"name", "user_ids"=>[], "created_at"=>2013-11-24 18:09:49 UTC, "updated_at"=>2013-11-24 18:09:50 UTC, "id2"=>5, "user_id"=>BSON::ObjectId('5291a4a1ea39a40a80000001')})
+MONGODB (43.1ms) taskfishmvp_a_development['users'].find({:email=>"xxx@yyy.com", :_id=>{:$ne=>BSON::ObjectId('5291a4a1ea39a40a80000001')}}, {:_id=>1}).limit(-1)
+MONGODB (11.0ms) taskfishmvp_a_development['users'].update({:_id=>BSON::ObjectId('5291a4a1ea39a40a80000001')}, {"_id"=>BSON::ObjectId('5291a4a1ea39a40a80000001'), "name"=>"name", "age"=>20, "sex"=>"m", "country"=>"us", "city"=>"wk", "latitude"=>37.785834, "longitude"=>-122.406417, "email"=>"xxx@yyy.com", "fb_access_token"=>"CAAH0aKqLGGsBAOK27Y3MAIMSG8eMMaG56yiqNwKblczOZB7ieRFvDHXuhS0H0ZBxorLSZBMOmJ5QfiB9r5IObbjJatmCFcdzL5sfIYRZBxklvH1wPfUIyRHFGAm5ZBL7givkHNHAsN4GSqCQ0UwoYiBh0hJPZBEHOdQGCMmVn8ZCKUPasze00TA&expires", "created_at"=>2013-11-24 07:02:58 UTC, "updated_at"=>2013-11-24 18:09:50 UTC, "id2"=>1})
+Completed 200 OK in 169ms (Views: 2.0ms)
+
+
+Started GET "/api/v1/users/1/events.json" for 192.168.219.128 at 2013-11-24 23:09:52 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"1"}
+MONGODB (11.0ms) taskfishmvp_a_development['users'].find({:id2=>1}).limit(-1)
+MONGODB (13.0ms) taskfishmvp_a_development['events'].find({:user_id=>BSON::ObjectId('5291a4a1ea39a40a80000001')})
+Completed 200 OK in 37ms (Views: 24.0ms)
+MONGODB (12.0ms) taskfishmvp_a_development['events'].find({}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['events'].find({}).limit(-1)
+MONGODB (11.0ms) taskfishmvp_a_development['users'].find({:_id=>BSON::ObjectId('5291a4a1ea39a40a80000001')}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['events'].find({}).limit(-1).sort([[:_id, -1]])
+MONGODB (12.0ms) taskfishmvp_a_development['users'].find({:_id=>BSON::ObjectId('5291a4a1ea39a40a80000001')}).limit(-1)
