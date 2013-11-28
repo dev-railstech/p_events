@@ -10,9 +10,20 @@ class User
   key :latitude , Float
   key :longitude , Float
   key :email , String , :required => true
+
   key :fb_access_token , String
+  key :fb_link , String
+  key :fb_id , String
+
   key :tw_access_token , String
+  key :tw_link , String
+  key :tw_id , String
+
   key :ig_access_token , String
+  key :ig_link , String
+  key :ig_id , String
+
+  key :profile_image_url , String
 
   validates_uniqueness_of :email
 

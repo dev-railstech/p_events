@@ -13,15 +13,30 @@ module Api
           user.city = params[:city]
           user.latitude = params[:latitude]
           user.longitude = params[:longitude]
-          user.fb_access_token = params[:fb_access_token]
-          user.tw_access_token = params[:tw_access_token]
-          user.ig_access_token = params[:ig_access_token]
+
+          if params[:fb_access_token].present?
+            user.fb_access_token = params[:fb_access_token]
+            user.fb_link = params[:fb_link]
+            user.fb_id = params[:fb_id]
+          end
+
+          if params[:tw_access_token].present?
+            user.tw_access_token = params[:tw_access_token]
+            user.tw_link = params[:tw_link]
+            user.tw_id = params[:tw_id]
+          end
+
+          if params[:ig_access_token].present?
+            user.ig_access_token = params[:ig_access_token]
+            user.ig_link = params[:ig_link]
+            user.ig_id = params[:ig_id]
+          end
+
           if user.save
             respond_to do |format|
               format.json { render :json => user }
             end
           else
-            binding.pry
             respond_to do |format|
               format.json { render :json => { :message => 'Invalid data',:status => 121} }
             end

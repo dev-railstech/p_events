@@ -7,19 +7,21 @@
       <change type="DELETED" beforePath="C:\Development\TaskFishMVP-Service\app\controllers\event_controller.rb" afterPath="" />
       <change type="DELETED" beforePath="C:\Development\TaskFishMVP-Service\app\controllers\picture_controller.rb" afterPath="" />
       <change type="DELETED" beforePath="C:\Development\TaskFishMVP-Service\app\controllers\user_controller.rb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/event.rb" afterPath="$PROJECT_DIR$/app/models/event.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/v1/user_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/v1/user_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TaskFishMVP-Service.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="23f49944-740f-4121-a6cc-d39e4b8411bf" time="1385312919881" ignored="false" />
+    <file path="/Dummy.txt" changelist="23f49944-740f-4121-a6cc-d39e4b8411bf" time="1385648144300" ignored="false" />
     <file path="/routes.rb" changelist="23f49944-740f-4121-a6cc-d39e4b8411bf" time="1385297392362" ignored="false" />
     <file path="/event_controller.rb" changelist="23f49944-740f-4121-a6cc-d39e4b8411bf" time="1385318968140" ignored="false" />
     <file path="/comment_controller.rb" changelist="23f49944-740f-4121-a6cc-d39e4b8411bf" time="1385298478399" ignored="false" />
     <file path="/picture_controller.rb" changelist="23f49944-740f-4121-a6cc-d39e4b8411bf" time="1385298510196" ignored="false" />
-    <file path="/user_controller.rb" changelist="23f49944-740f-4121-a6cc-d39e4b8411bf" time="1385298743499" ignored="false" />
+    <file path="/user_controller.rb" changelist="23f49944-740f-4121-a6cc-d39e4b8411bf" time="1385649529610" ignored="false" />
     <file path="/event.rb" changelist="23f49944-740f-4121-a6cc-d39e4b8411bf" time="1385320441275" ignored="false" />
     <file path="/a.dummy" changelist="23f49944-740f-4121-a6cc-d39e4b8411bf" time="1385319434645" ignored="false" />
+    <file path="/user.rb" changelist="23f49944-740f-4121-a6cc-d39e4b8411bf" time="1385648922765" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,10 +59,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="event.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="event.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/event.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="13" selection-start="484" selection-end="484" vertical-scroll-proportion="0.5931624">
+            <state line="26" column="13" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -69,7 +71,7 @@
       <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/user.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="7" selection-start="696" selection-end="696" vertical-scroll-proportion="0.0">
+            <state line="22" column="39" selection-start="496" selection-end="496" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -84,10 +86,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="user_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/user_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="22" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.0">
+            <state line="27" column="30" selection-start="957" selection-end="957" vertical-scroll-proportion="0.7495712">
               <folding />
             </state>
           </provider>
@@ -123,9 +125,10 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/v1/comment_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/v1/picture_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/api/v1/user_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/v1/event_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/event.rb" />
+        <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/api/v1/user_controller.rb" />
       </list>
     </option>
   </component>
@@ -161,7 +164,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="RailsProjectView">
         <subPane>
           <PATH>
@@ -236,6 +238,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -253,9 +256,10 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="828" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="153" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="147" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="RubyRunConfigurationType" factoryName="Ruby">
@@ -291,10 +295,9 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25378788" sideWeight="0.6710311" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25757575" sideWeight="0.6710311" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -303,6 +306,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -369,6 +373,27 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/picture_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="0" selection-start="1908" selection-end="1908" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/user_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="22" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/event_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="65" selection-start="1802" selection-end="1802" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="26" selection-start="1404" selection-end="1404" vertical-scroll-proportion="0.0">
@@ -411,13 +436,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/user_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="22" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/picture_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="75" column="0" selection-start="1908" selection-end="1908" vertical-scroll-proportion="0.0">
@@ -446,16 +464,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/event.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="7" selection-start="696" selection-end="696" vertical-scroll-proportion="0.0">
+        <state line="26" column="13" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/event.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="13" selection-start="484" selection-end="484" vertical-scroll-proportion="0.5931624">
+        <state line="22" column="39" selection-start="496" selection-end="496" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/user_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="30" selection-start="957" selection-end="957" vertical-scroll-proportion="0.7495712">
           <folding />
         </state>
       </provider>
