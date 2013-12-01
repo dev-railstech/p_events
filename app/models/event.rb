@@ -22,6 +22,7 @@ class Event
   many :pictures
 
   belongs_to :user
+  many :likes
 
   def organizer
     self.user

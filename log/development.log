@@ -985,3 +985,5 @@ Processing by Api::V1::EventController#show as JSON
 MONGODB (12.0ms) taskfishmvp_a_development['users'].find({:id2=>2}).limit(-1)
 MONGODB (49.0ms) taskfishmvp_a_development['events'].find({:id2=>7}).limit(-1)
 Completed 200 OK in 70ms (Views: 3.0ms)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (11.4ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)

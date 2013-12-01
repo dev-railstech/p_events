@@ -22,6 +22,9 @@ TaskfishmvpA::Application.routes.draw do
       get 'users/:user_id/events/:event_id/pictures/:picture_id' => 'picture#show'
       delete 'users/:user_id/events/:event_id/pictures/:picture_id' => 'picture#remove'
 
+      get 'users/:user_id/events/:event_id/like' => 'like#like_event'
+      get 'users/:user_id/events/:event_id/unlike' => 'like#unlike_event'
+
     end
   end
 
