@@ -64,6 +64,7 @@ module Api
           @event.longitude = params[:longitude]
           @event.created_by_name = user.name
           @event.user = user
+          @event.users << user
           respond_to do |format|
             if @event.save
               user.events << @event
@@ -83,10 +84,39 @@ module Api
       def invite
 
         user = User.find_by_id2 params[:user_id].to_i
-        event = User.find_by_id2 params[:event_id].to_i
+        event = Event.find_by_id2 params[:event_id].to_i
 
         response = { :message => 'Failed to invite users' , :status => 104 }
 
+        if event.present?
+
+            user_invited = User.find_by_email params[:email]
+            if user_invited.present?
+              user_invited.events << event
+              event.users << user_invited
+              user_invited.save
+            else
+              #binding.pry
+              #use mailer to send invitation email alongwith app link
+            end
+
+          event.save
+          response = { :message => 'User invited successfully' , :status => 0 } if event.save
+        end
+
+        respond_to do |format|
+          format.json { render :json => response }
+        end
+
+      end
+
+      def invite_backup
+
+        user = User.find_by_id2 params[:user_id].to_i
+        event = Event.find_by_id2 params[:event_id].to_i
+
+        response = { :message => 'Failed to invite users' , :status => 104 }
+        binding.pry
         if event.present?
           params[:user_ids].each do |user_id|
             user_invited = User.find_by_id2 user_id.to_i
@@ -105,6 +135,7 @@ module Api
         end
 
       end
+
 
     end
 
