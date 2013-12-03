@@ -12,9 +12,9 @@ TaskfishmvpA::Application.routes.draw do
       post 'users/:user_id/events/create' => 'event#create'
       post 'users/:user_id/events/:event_id/invite' => 'event#invite'
 
-      post 'users/:user_id/events/:event_id/comments/create' => 'comment#create_event_comment'
+      post 'users/:user_id/events/:event_id/comment' => 'comment#create_event_comment'
       get 'users/:user_id/events/:event_id/comments' => 'comment#get_event_comments'
-      post 'users/:user_id/events/:event_id/pictures/:picture_id/comments/create' => 'comment#create_picture_comment'
+      post 'users/:user_id/events/:event_id/pictures/:picture_id/comment' => 'comment#create_picture_comment'
       get 'users/:user_id/events/:event_id/pictures/:picture_id/comments' => 'comment#get_picture_comment'
 
       post 'users/:user_id/events/:event_id/pictures/create' => 'picture#create'
@@ -23,7 +23,7 @@ TaskfishmvpA::Application.routes.draw do
       delete 'users/:user_id/events/:event_id/pictures/:picture_id' => 'picture#remove'
 
       get 'users/:user_id/events/:event_id/like' => 'like#like_event'
-      get 'users/:user_id/events/:event_id/unlike' => 'like#unlike_event'
+      get 'users/:user_id/events/:event_id/likes' => 'like#event_likes'
 
     end
   end

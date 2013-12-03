@@ -10,10 +10,13 @@ module Api
         response = { :message => 'Event not found' , :status => 100 }
 
         if event
-          comment = event.comments.new
+          comment = Comment.new
           comment.text = params[:comment]
           comment.user_id = user.id2
           comment.user_name = user.name
+          comment.save
+          event.comments << comment
+          event.save
           response[:message] = "Comment posted successfully"
           response[:status] = 0
         end
@@ -50,10 +53,13 @@ module Api
         response = { :message => 'Picture not found' , :status => 102 }
 
         if event
-          comment = picture.comments.new
+          comment = Comment.new
           comment.text = params[:comment]
           comment.user_id = user.id2
           comment.user_name = user.name
+          comment.save
+          picture.comments << comment
+          picture.save
           response[:message] = "Comment posted successfully"
           response[:status] = 0
         end
