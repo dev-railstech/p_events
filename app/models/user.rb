@@ -25,6 +25,8 @@ class User
 
   key :profile_image_url , String
 
+  key :social_network
+
   validates_uniqueness_of :email
 
   validate :access_token_presence

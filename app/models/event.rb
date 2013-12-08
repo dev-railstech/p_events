@@ -13,11 +13,14 @@ class Event
 
   key :user_ids , Array
 
+  key :created_by_profile_picture
+
   timestamps!
 
   auto_increment!
 
   many :users , :in => :user_ids
+
   many :comments, :as => :commentable
   many :pictures
 

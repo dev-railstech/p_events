@@ -63,6 +63,7 @@ module Api
           @event.latitude = params[:latitude]
           @event.longitude = params[:longitude]
           @event.created_by_name = user.name
+          @event.created_by_profile_picture = user.profile_image_url
           @event.user = user
           @event.users << user
           respond_to do |format|
@@ -79,6 +80,7 @@ module Api
             format.json { render :json => { :message => 'Failed to create event' , :status => 105 } }
           end
         end
+
       end
 
       def invite
