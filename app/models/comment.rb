@@ -1,6 +1,6 @@
 class Comment
 
-  include MongoMapper::Document
+  include MongoMapper::EmbeddedDocument
 
   key :user_id , Integer , :required => true
   key :user_name , String
@@ -8,7 +8,7 @@ class Comment
 
   timestamps!
 
-  auto_increment!
+  #auto_increment!
 
   belongs_to :commentable, :polymorphic => true
 

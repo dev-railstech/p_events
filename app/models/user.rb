@@ -27,6 +27,8 @@ class User
 
   key :social_network
 
+  key :event_ids , Array
+
   validates_uniqueness_of :email
 
   validate :access_token_presence
@@ -43,10 +45,14 @@ class User
 
   one :role
 
-  many :events
+  many :events  , :in => :event_ids
 
   def get_all_events
     self.events
+  end
+
+  def get_active_events
+    self.events.active.order("event_date asc").all
   end
 
 end

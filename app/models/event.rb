@@ -4,12 +4,16 @@ class Event
 
   key :title , String , :required => true
   key :venue , String
-  key :event_date , DateTime
+  key :event_date , Time
   key :latitude , Float
   key :longitude , Float
   key :last_comment_id , Integer
   key :last_picture_id , Integer
   key :created_by_name , String
+
+  key :attendant_profile_images , Array
+
+  key :expire_at , Time
 
   key :user_ids , Array
 
@@ -24,8 +28,17 @@ class Event
   many :comments, :as => :commentable
   many :pictures
 
+  scope :active , where(:expire_at.gte => Time.now )
+
   belongs_to :user
   many :likes
+
+  def expire_after
+    x = (expire_at - Time.now)/3600
+    hours = x.to_i/60
+    minutes = x.to_i % 60
+    "#{hours} hours and #{minutes} left"
+  end
 
   def organizer
     self.user

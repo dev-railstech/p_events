@@ -59,13 +59,14 @@ module Api
           @event = Event.new
           @event.title = params[:title]
           @event.venue = params[:venue]
-          @event.event_date = params[:event_date]
+          @event.event_date = Time.parse(params[:event_date])
           @event.latitude = params[:latitude]
           @event.longitude = params[:longitude]
           @event.created_by_name = user.name
           @event.created_by_profile_picture = user.profile_image_url
           @event.user = user
           @event.users << user
+          @event.expire_at = Time.parse(params[:event_date]) + params[:expire_after].to_i.hours
           respond_to do |format|
             if @event.save
               user.events << @event
@@ -96,6 +97,7 @@ module Api
             if user_invited.present?
               user_invited.events << event
               event.users << user_invited
+              event.attendant_profile_images << user_invited.profile_image_url
               user_invited.save
             else
               #binding.pry
