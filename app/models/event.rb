@@ -25,7 +25,7 @@ class Event
 
   many :users , :in => :user_ids
 
-  many :comments, :as => :commentable
+  many :comments
   many :pictures
 
   scope :active , where(:expire_at.gte => Time.now )

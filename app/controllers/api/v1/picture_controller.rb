@@ -42,8 +42,13 @@ module Api
         response = { :message => 'An unknown error prohibits saving this picture' , :status => 116 }
 
         if event.present?
-          event.pictures.create(params)
-          response = { :message => 'Picture saved successfully' , :status => 0 }
+          picture = Picture.new(params)
+          picture.save
+          picture.image_url = picture.avatar
+          picture.save
+          event.pictures << picture
+          event.save
+          response = { :message => 'Picture saved successfully' , :status => 0 , :picture_url => picture.avatar }
         end
 
         respond_to do |format|

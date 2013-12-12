@@ -5437,3 +5437,1119 @@ MONGODB (12.0ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::Objec
 MONGODB (11.0ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
 MONGODB (11.0ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
 Completed 200 OK in 113ms (Views: 15.0ms)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (98.7ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+
+
+Started POST "/api/v1/users/create.json" for 192.168.219.128 at 2013-12-11 23:05:17 +0500
+Processing by Api::V1::UserController#create as JSON
+  Parameters: {"name"=>"Ruby Ruby", "age"=>"0", "country"=>"us", "city"=>"wk", "latitude"=>"37.785834", "longitude"=>"-122.406417", "sex"=>"", "email"=>"ruby.rails@outlook.com", "profile_image_url"=>"http://graph.facebook.com/100007095040271/picture", "fb_access_token"=>"CAAH0aKqLGGsBABdiQkW7rBXr8aQZCPT9ZCBWivMksZAMHuWAJGZBeNzJLElWiKWMLpisxVhOlCQq66rlfTpBWDlDf6B0doOCWdRLqF37mmcARFJF8jvb2FG52cBWMECWRHjjbwVrIij1jcWOh9C16JnAKGbBHwgZBV7B5yWJWGGpe9oH1k7bBNjxEv2OKIIgZD&expires", "fb_link"=>"https://www.facebook.com/ruby.ruby.3388630", "fb_id"=>"100007095040271"}
+MONGODB (13.0ms) taskfishmvp_a_development['users'].find({:email=>"ruby.rails@outlook.com"}).limit(-1)
+Completed 200 OK in 329ms (Views: 16.0ms)
+
+
+Started GET "/api/v1/users/4/events.json" for 192.168.219.128 at 2013-12-11 23:05:20 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"4"}
+MONGODB (49.0ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (68.0ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52a6073fea39a40d18000002')]}})
+Completed 200 OK in 401ms (Views: 285.2ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-11 23:05:40 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (43.0ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 70ms (Views: 7.8ms)
+
+
+Started GET "/api/v1/users/4/events/21/likes.json" for 192.168.219.128 at 2013-12-11 23:05:40 +0500
+Processing by Api::V1::LikeController#event_likes as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (15.6ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
+MONGODB (11.7ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
+Completed 200 OK in 109ms (Views: 15.6ms)
+
+
+Started GET "/api/v1/users/4/events.json" for 192.168.219.128 at 2013-12-11 23:05:45 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"4"}
+MONGODB (14.7ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (14.7ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52a6073fea39a40d18000002')]}})
+Completed 200 OK in 40ms (Views: 22.1ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-11 23:06:04 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (11.7ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 39ms (Views: 7.8ms)
+
+
+Started GET "/api/v1/users/4/events/21/likes.json" for 192.168.219.128 at 2013-12-11 23:06:04 +0500
+Processing by Api::V1::LikeController#event_likes as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (46.9ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (11.7ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
+MONGODB (11.7ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
+Completed 200 OK in 113ms (Views: 15.6ms)
+
+
+Started GET "/api/v1/users/4/events/21/like.json" for 192.168.219.128 at 2013-12-11 23:14:30 +0500
+Processing by Api::V1::LikeController#like_event as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (12.0ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (11.0ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (11.0ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (11.0ms) taskfishmvp_a_development['$cmd'].find({"count"=>"sequences", "query"=>{"seq_name"=>"Like"}, "fields"=>nil}).limit(-1)
+MONGODB (11.0ms) taskfishmvp_a_development['$cmd'].find({:findandmodify=>"sequences", "query"=>{"seq_name"=>"Like"}, "update"=>{"$inc"=>{"number"=>1}}, "new"=>true}).limit(-1)
+MONGODB (11.0ms) taskfishmvp_a_development['likes'].insert([{"_id"=>BSON::ObjectId('52a8ab86ea39a41658000001'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-11 18:14:30 UTC, "updated_at"=>2013-12-11 18:14:30 UTC, "id2"=>32, "event_id"=>nil}])
+MONGODB (54.0ms) taskfishmvp_a_development['likes'].update({:_id=>BSON::ObjectId('52a8ab86ea39a41658000001')}, {"_id"=>BSON::ObjectId('52a8ab86ea39a41658000001'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-11 18:14:30 UTC, "updated_at"=>2013-12-11 18:14:30 UTC, "id2"=>32, "event_id"=>BSON::ObjectId('52a6073fea39a40d18000002')})
+MONGODB (34.1ms) taskfishmvp_a_development['events'].update({:_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, {"_id"=>BSON::ObjectId('52a6073fea39a40d18000002'), "title"=>"test1", "venue"=>"kkkkk", "event_date"=>2013-12-09 18:08:00 UTC, "latitude"=>37.785834, "longitude"=>-122.406417, "created_by_name"=>"Ruby Ruby", "attendant_profile_images"=>["http://pbs.twimg.com/profile_images/2141559681/554865_3251716484321_1009271954_32664883_335004350_n_normal.jpg"], "expire_at"=>2013-12-11 18:08:00 UTC, "user_ids"=>[BSON::ObjectId('52a41133ea39a40fa0000004'), BSON::ObjectId('52a4cf09ea39a41014000002')], "created_by_profile_picture"=>"http://graph.facebook.com/100007095040271/picture", "created_at"=>2013-12-09 18:09:03 UTC, "updated_at"=>2013-12-11 18:14:30 UTC, "id2"=>21, "user_id"=>BSON::ObjectId('52a41133ea39a40fa0000004'), :comments=>[{"_id"=>BSON::ObjectId('52a75ea9ea39a40fbc000003'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:17 UTC, "updated_at"=>2013-12-11 18:14:30 UTC, "commentable_id"=>nil}, {"_id"=>BSON::ObjectId('52a75eaeea39a40fbc000004'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:22 UTC, "updated_at"=>2013-12-11 18:14:30 UTC, "commentable_id"=>nil}, {"_id"=>BSON::ObjectId('52a75eb0ea39a40fbc000005'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:24 UTC, "updated_at"=>2013-12-11 18:14:30 UTC, "commentable_id"=>nil}]})
+Completed 200 OK in 465ms (Views: 1.0ms)
+
+
+Started GET "/api/v1/users/4/events/21/likes.json" for 192.168.219.128 at 2013-12-11 23:14:30 +0500
+Processing by Api::V1::LikeController#event_likes as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (11.0ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (11.1ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (11.0ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
+Completed 200 OK in 73ms (Views: 16.0ms)
+
+
+Started GET "/api/v1/users/4/events.json" for 192.168.219.128 at 2013-12-11 23:41:51 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"4"}
+MONGODB (3.3ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (13.3ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52a6073fea39a40d18000002')]}})
+Completed 200 OK in 33ms (Views: 23.3ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-11 23:42:26 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (14.7ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (35.2ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 65ms (Views: 8.8ms)
+
+
+Started GET "/api/v1/users/4/events/21/likes.json" for 192.168.219.128 at 2013-12-11 23:42:26 +0500
+Processing by Api::V1::LikeController#event_likes as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (14.7ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (14.7ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (61.6ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (11.7ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
+MONGODB (11.7ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
+Completed 200 OK in 129ms (Views: 17.6ms)
+
+
+Started GET "/api/v1/users/4/events.json" for 192.168.219.128 at 2013-12-11 23:46:17 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"4"}
+MONGODB (14.5ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (58.1ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52a6073fea39a40d18000002')]}})
+Completed 200 OK in 87ms (Views: 69.8ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-11 23:47:07 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (15.9ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (13.3ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 45ms (Views: 10.6ms)
+
+
+Started GET "/api/v1/users/4/events/21/likes.json" for 192.168.219.128 at 2013-12-11 23:47:07 +0500
+Processing by Api::V1::LikeController#event_likes as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (13.3ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (13.3ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (13.3ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (13.3ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
+MONGODB (13.3ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
+Completed 200 OK in 135ms (Views: 18.6ms)
+
+
+Started POST "/api/v1/users/4/events/21/pictures/create.json" for 192.168.219.128 at 2013-12-11 23:47:14 +0500
+Processing by Api::V1::PictureController#create as JSON
+  Parameters: {"file"=>#<ActionDispatch::Http::UploadedFile:0x4dd30f0 @tempfile=#<File:C:/Users/Ruby/AppData/Local/Temp/RackMultipart20131211-5720-1mslzw9>, @original_filename="photo_003.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"photo_003.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 32037\r\n">, "user_id"=>"4", "event_id"=>"21"}
+MONGODB (15.0ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 30ms (Views: 1.0ms)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (45.2ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+MONGODB (110.5ms) taskfishmvp_a_development['pictures'].find({}).limit(-1).sort([[:_id, -1]])
+
+
+Started POST "/api/v1/users/4/events/21/pictures/create.json" for 192.168.219.128 at 2013-12-12 00:17:53 +0500
+Processing by Api::V1::PictureController#create as JSON
+  Parameters: {"file"=>#<ActionDispatch::Http::UploadedFile:0x4f2c7e0 @tempfile=#<File:C:/Users/Ruby/AppData/Local/Temp/RackMultipart20131212-5720-dfm5h7>, @original_filename="photo_004.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"photo_004.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 32037\r\n">, "user_id"=>"4", "event_id"=>"21"}
+MONGODB (12.0ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['events'].update({:_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, {"_id"=>BSON::ObjectId('52a6073fea39a40d18000002'), "title"=>"test1", "venue"=>"kkkkk", "event_date"=>2013-12-09 18:08:00 UTC, "latitude"=>37.785834, "longitude"=>-122.406417, "created_by_name"=>"Ruby Ruby", "attendant_profile_images"=>["http://pbs.twimg.com/profile_images/2141559681/554865_3251716484321_1009271954_32664883_335004350_n_normal.jpg"], "expire_at"=>2013-12-11 18:08:00 UTC, "user_ids"=>[BSON::ObjectId('52a41133ea39a40fa0000004'), BSON::ObjectId('52a4cf09ea39a41014000002')], "created_by_profile_picture"=>"http://graph.facebook.com/100007095040271/picture", "created_at"=>2013-12-09 18:09:03 UTC, "updated_at"=>2013-12-11 19:17:54 UTC, "id2"=>21, "user_id"=>BSON::ObjectId('52a41133ea39a40fa0000004'), :comments=>[{"_id"=>BSON::ObjectId('52a75ea9ea39a40fbc000003'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:17 UTC, "updated_at"=>2013-12-11 19:17:54 UTC, "commentable_id"=>nil}, {"_id"=>BSON::ObjectId('52a75eaeea39a40fbc000004'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:22 UTC, "updated_at"=>2013-12-11 19:17:54 UTC, "commentable_id"=>nil}, {"_id"=>BSON::ObjectId('52a75eb0ea39a40fbc000005'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:24 UTC, "updated_at"=>2013-12-11 19:17:54 UTC, "commentable_id"=>nil}]})
+Completed 200 OK in 280ms (Views: 1.0ms)
+MONGODB (12.2ms) taskfishmvp_a_development['pictures'].find({}).limit(-1).sort([[:_id, -1]])
+MONGODB (12.0ms) taskfishmvp_a_development['pictures'].find({}).limit(-1).sort([[:_id, -1]])
+MONGODB (12.1ms) taskfishmvp_a_development['pictures'].find({}).limit(-1).sort([[:_id, -1]])
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (12.2ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+
+
+Started GET "/api/v1/users/4/events.json" for 192.168.219.128 at 2013-12-12 00:19:36 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"4"}
+MONGODB (13.0ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52a6073fea39a40d18000002')]}})
+Completed 200 OK in 67ms (Views: 24.0ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-12 00:20:10 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (12.0ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (13.0ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 41ms (Views: 9.0ms)
+
+
+Started GET "/api/v1/users/4/events/21/likes.json" for 192.168.219.128 at 2013-12-12 00:20:10 +0500
+Processing by Api::V1::LikeController#event_likes as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (12.0ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (11.0ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (11.0ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
+Completed 200 OK in 79ms (Views: 18.0ms)
+
+
+Started POST "/api/v1/users/4/events/21/pictures/create.json" for 192.168.219.128 at 2013-12-12 00:20:24 +0500
+Processing by Api::V1::PictureController#create as JSON
+  Parameters: {"avatar"=>#<ActionDispatch::Http::UploadedFile:0x5476788 @tempfile=#<File:C:/Users/Ruby/AppData/Local/Temp/RackMultipart20131212-5720-qlp8n5>, @original_filename="photo_005.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"avatar\"; filename=\"photo_005.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 32037\r\n">, "user_id"=>"4", "event_id"=>"21"}
+MONGODB (12.0ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (11.0ms) taskfishmvp_a_development['events'].update({:_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, {"_id"=>BSON::ObjectId('52a6073fea39a40d18000002'), "title"=>"test1", "venue"=>"kkkkk", "event_date"=>2013-12-09 18:08:00 UTC, "latitude"=>37.785834, "longitude"=>-122.406417, "created_by_name"=>"Ruby Ruby", "attendant_profile_images"=>["http://pbs.twimg.com/profile_images/2141559681/554865_3251716484321_1009271954_32664883_335004350_n_normal.jpg"], "expire_at"=>2013-12-11 18:08:00 UTC, "user_ids"=>[BSON::ObjectId('52a41133ea39a40fa0000004'), BSON::ObjectId('52a4cf09ea39a41014000002')], "created_by_profile_picture"=>"http://graph.facebook.com/100007095040271/picture", "created_at"=>2013-12-09 18:09:03 UTC, "updated_at"=>2013-12-11 19:20:24 UTC, "id2"=>21, "user_id"=>BSON::ObjectId('52a41133ea39a40fa0000004'), :comments=>[{"_id"=>BSON::ObjectId('52a75ea9ea39a40fbc000003'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:17 UTC, "updated_at"=>2013-12-11 19:20:24 UTC, "commentable_id"=>nil}, {"_id"=>BSON::ObjectId('52a75eaeea39a40fbc000004'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:22 UTC, "updated_at"=>2013-12-11 19:20:24 UTC, "commentable_id"=>nil}, {"_id"=>BSON::ObjectId('52a75eb0ea39a40fbc000005'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:24 UTC, "updated_at"=>2013-12-11 19:20:24 UTC, "commentable_id"=>nil}]})
+Completed 200 OK in 76ms (Views: 1.0ms)
+MONGODB (13.0ms) taskfishmvp_a_development['pictures'].find({}).limit(-1).sort([[:_id, -1]])
+MONGODB (21.2ms) taskfishmvp_a_development['$cmd'].find({"count"=>"pictures", "query"=>{}, "fields"=>nil}).limit(-1)
+
+
+Started POST "/api/v1/users/4/events/21/pictures/create.json" for 192.168.219.128 at 2013-12-12 00:33:32 +0500
+Processing by Api::V1::PictureController#create as JSON
+  Parameters: {"avatar"=>#<ActionDispatch::Http::UploadedFile:0x549e760 @tempfile=#<File:C:/Users/Ruby/AppData/Local/Temp/RackMultipart20131212-5720-4oyjji>, @original_filename="photo_006.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"avatar\"; filename=\"photo_006.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 32037\r\n">, "user_id"=>"4", "event_id"=>"21"}
+MONGODB (11.0ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['events'].update({:_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, {"_id"=>BSON::ObjectId('52a6073fea39a40d18000002'), "title"=>"test1", "venue"=>"kkkkk", "event_date"=>2013-12-09 18:08:00 UTC, "latitude"=>37.785834, "longitude"=>-122.406417, "created_by_name"=>"Ruby Ruby", "attendant_profile_images"=>["http://pbs.twimg.com/profile_images/2141559681/554865_3251716484321_1009271954_32664883_335004350_n_normal.jpg"], "expire_at"=>2013-12-11 18:08:00 UTC, "user_ids"=>[BSON::ObjectId('52a41133ea39a40fa0000004'), BSON::ObjectId('52a4cf09ea39a41014000002')], "created_by_profile_picture"=>"http://graph.facebook.com/100007095040271/picture", "created_at"=>2013-12-09 18:09:03 UTC, "updated_at"=>2013-12-11 19:34:08 UTC, "id2"=>21, "user_id"=>BSON::ObjectId('52a41133ea39a40fa0000004'), :comments=>[{"_id"=>BSON::ObjectId('52a75ea9ea39a40fbc000003'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:17 UTC, "updated_at"=>2013-12-11 19:34:08 UTC, "commentable_id"=>nil}, {"_id"=>BSON::ObjectId('52a75eaeea39a40fbc000004'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:22 UTC, "updated_at"=>2013-12-11 19:34:08 UTC, "commentable_id"=>nil}, {"_id"=>BSON::ObjectId('52a75eb0ea39a40fbc000005'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:24 UTC, "updated_at"=>2013-12-11 19:34:08 UTC, "commentable_id"=>nil}]})
+Completed 200 OK in 36066ms (Views: 1.0ms)
+
+
+Started GET "/api/v1/users/4/events.json" for 192.168.219.128 at 2013-12-12 00:36:12 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"4"}
+MONGODB (12.0ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52a6073fea39a40d18000002')]}})
+Completed 200 OK in 257ms (Views: 88.1ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-12 00:36:31 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (64.0ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 92ms (Views: 10.0ms)
+
+
+Started GET "/api/v1/users/4/events/21/likes.json" for 192.168.219.128 at 2013-12-12 00:36:31 +0500
+Processing by Api::V1::LikeController#event_likes as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (12.0ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (11.0ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
+Completed 200 OK in 81ms (Views: 19.0ms)
+
+
+Started POST "/api/v1/users/4/events/21/pictures/create.json" for 192.168.219.128 at 2013-12-12 00:36:40 +0500
+Processing by Api::V1::PictureController#create as JSON
+  Parameters: {"title"=>"xyz", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x4dc6850 @tempfile=#<File:C:/Users/Ruby/AppData/Local/Temp/RackMultipart20131212-5720-1j0hn6k>, @original_filename="photo_007.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"avatar\"; filename=\"photo_007.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 32037\r\n">, "user_id"=>"4", "event_id"=>"21"}
+MONGODB (11.0ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['$cmd'].find({"count"=>"sequences", "query"=>{"seq_name"=>"Picture"}, "fields"=>nil}).limit(-1)
+MONGODB (11.0ms) taskfishmvp_a_development['sequences'].insert([{"seq_name"=>"Picture", "number"=>0, :_id=>BSON::ObjectId('52a8bec8ea39a41658000007')}])
+MONGODB (12.0ms) taskfishmvp_a_development['$cmd'].find({:findandmodify=>"sequences", "query"=>{"seq_name"=>"Picture"}, "update"=>{"$inc"=>{"number"=>1}}, "new"=>true}).limit(-1)
+MONGODB (440.3ms) taskfishmvp_a_development['pictures'].insert([{"_id"=>BSON::ObjectId('52a8bec8ea39a41658000006'), "user_id"=>4, "title"=>"xyz", "created_at"=>2013-12-11 19:36:40 UTC, "updated_at"=>2013-12-11 19:36:40 UTC, "id2"=>1, "event_id"=>"21", "avatar_file_name"=>"photo_007.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}])
+[AWS S3 200 5.21681 0 retries] put_object(:acl=>:public_read,:bucket_name=>"taskfishmvp-a",:content_length=>32037,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: photo_007.jpg,:key=>"pictures/avatars//original/photo_007.jpg")  
+
+MONGODB (12.0ms) taskfishmvp_a_development['pictures'].update({:_id=>BSON::ObjectId('52a8bec8ea39a41658000006')}, {"_id"=>BSON::ObjectId('52a8bec8ea39a41658000006'), "user_id"=>4, "title"=>"xyz", "created_at"=>2013-12-11 19:36:40 UTC, "updated_at"=>2013-12-11 19:36:49 UTC, "id2"=>1, "event_id"=>BSON::ObjectId('52a6073fea39a40d18000002'), "avatar_file_name"=>"photo_007.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]})
+MONGODB (57.0ms) taskfishmvp_a_development['events'].update({:_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, {"_id"=>BSON::ObjectId('52a6073fea39a40d18000002'), "title"=>"test1", "venue"=>"kkkkk", "event_date"=>2013-12-09 18:08:00 UTC, "latitude"=>37.785834, "longitude"=>-122.406417, "created_by_name"=>"Ruby Ruby", "attendant_profile_images"=>["http://pbs.twimg.com/profile_images/2141559681/554865_3251716484321_1009271954_32664883_335004350_n_normal.jpg"], "expire_at"=>2013-12-11 18:08:00 UTC, "user_ids"=>[BSON::ObjectId('52a41133ea39a40fa0000004'), BSON::ObjectId('52a4cf09ea39a41014000002')], "created_by_profile_picture"=>"http://graph.facebook.com/100007095040271/picture", "created_at"=>2013-12-09 18:09:03 UTC, "updated_at"=>2013-12-11 19:36:49 UTC, "id2"=>21, "user_id"=>BSON::ObjectId('52a41133ea39a40fa0000004'), :comments=>[{"_id"=>BSON::ObjectId('52a75ea9ea39a40fbc000003'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:17 UTC, "updated_at"=>2013-12-11 19:36:49 UTC, "commentable_id"=>nil}, {"_id"=>BSON::ObjectId('52a75eaeea39a40fbc000004'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:22 UTC, "updated_at"=>2013-12-11 19:36:49 UTC, "commentable_id"=>nil}, {"_id"=>BSON::ObjectId('52a75eb0ea39a40fbc000005'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:24 UTC, "updated_at"=>2013-12-11 19:36:49 UTC, "commentable_id"=>nil}]})
+Completed 200 OK in 9657ms (Views: 1.0ms)
+MONGODB (34.1ms) taskfishmvp_a_development['pictures'].find({}).limit(-1).sort([[:_id, -1]])
+MONGODB (11.8ms) taskfishmvp_a_development['pictures'].find({}).limit(-1).sort([[:_id, -1]])
+
+
+Started POST "/api/v1/users/4/events/21/pictures/create.json" for 192.168.219.128 at 2013-12-12 00:38:53 +0500
+Processing by Api::V1::PictureController#create as JSON
+  Parameters: {"title"=>"xyz", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x5487540 @tempfile=#<File:C:/Users/Ruby/AppData/Local/Temp/RackMultipart20131212-5720-rfilh4>, @original_filename="photo_008.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"avatar\"; filename=\"photo_008.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 32037\r\n">, "user_id"=>"4", "event_id"=>"21"}
+MONGODB (13.0ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['$cmd'].find({"count"=>"sequences", "query"=>{"seq_name"=>"Picture"}, "fields"=>nil}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['$cmd'].find({:findandmodify=>"sequences", "query"=>{"seq_name"=>"Picture"}, "update"=>{"$inc"=>{"number"=>1}}, "new"=>true}).limit(-1)
+MONGODB (11.0ms) taskfishmvp_a_development['pictures'].insert([{"_id"=>BSON::ObjectId('52a8bf4dea39a41658000008'), "user_id"=>4, "title"=>"xyz", "created_at"=>2013-12-11 19:38:53 UTC, "updated_at"=>2013-12-11 19:38:53 UTC, "id2"=>2, "event_id"=>"21", "avatar_file_name"=>"photo_008.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}])
+[AWS S3 200 5.553912 0 retries] put_object(:acl=>:public_read,:bucket_name=>"taskfishmvp-a",:content_length=>32037,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: photo_008.jpg,:key=>"pictures/avatars//original/photo_008.jpg")  
+
+MONGODB (12.0ms) taskfishmvp_a_development['pictures'].update({:_id=>BSON::ObjectId('52a8bf4dea39a41658000008')}, {"_id"=>BSON::ObjectId('52a8bf4dea39a41658000008'), "user_id"=>4, "title"=>"xyz", "created_at"=>2013-12-11 19:38:53 UTC, "updated_at"=>2013-12-11 19:38:59 UTC, "id2"=>2, "event_id"=>BSON::ObjectId('52a6073fea39a40d18000002'), "avatar_file_name"=>"photo_008.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]})
+MONGODB (12.0ms) taskfishmvp_a_development['events'].update({:_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, {"_id"=>BSON::ObjectId('52a6073fea39a40d18000002'), "title"=>"test1", "venue"=>"kkkkk", "event_date"=>2013-12-09 18:08:00 UTC, "latitude"=>37.785834, "longitude"=>-122.406417, "created_by_name"=>"Ruby Ruby", "attendant_profile_images"=>["http://pbs.twimg.com/profile_images/2141559681/554865_3251716484321_1009271954_32664883_335004350_n_normal.jpg"], "expire_at"=>2013-12-11 18:08:00 UTC, "user_ids"=>[BSON::ObjectId('52a41133ea39a40fa0000004'), BSON::ObjectId('52a4cf09ea39a41014000002')], "created_by_profile_picture"=>"http://graph.facebook.com/100007095040271/picture", "created_at"=>2013-12-09 18:09:03 UTC, "updated_at"=>2013-12-11 19:38:59 UTC, "id2"=>21, "user_id"=>BSON::ObjectId('52a41133ea39a40fa0000004'), :comments=>[{"_id"=>BSON::ObjectId('52a75ea9ea39a40fbc000003'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:17 UTC, "updated_at"=>2013-12-11 19:38:59 UTC, "commentable_id"=>nil}, {"_id"=>BSON::ObjectId('52a75eaeea39a40fbc000004'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:22 UTC, "updated_at"=>2013-12-11 19:38:59 UTC, "commentable_id"=>nil}, {"_id"=>BSON::ObjectId('52a75eb0ea39a40fbc000005'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:24 UTC, "updated_at"=>2013-12-11 19:38:59 UTC, "commentable_id"=>nil}]})
+Completed 200 OK in 5941ms (Views: 5.0ms)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (46.1ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+
+
+Started GET "/api/v1/users/4/events.json" for 192.168.219.128 at 2013-12-13 00:19:45 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"4"}
+MONGODB (2658.1ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (707.8ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52a6073fea39a40d18000002')]}})
+Completed 500 Internal Server Error in 5686ms
+
+NoMethodError (undefined method `auto_increment!' for Picture:Class):
+  app/models/picture.rb:16:in `<class:Picture>'
+  app/models/picture.rb:1:in `<top (required)>'
+  app/controllers/api/v1/event_controller.rb:16:in `block (2 levels) in index'
+  app/controllers/api/v1/event_controller.rb:15:in `index'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.3ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (289.4ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (632.3ms)
+
+
+Started POST "/api/v1/users/create.json" for 192.168.219.128 at 2013-12-13 00:21:12 +0500
+Processing by Api::V1::UserController#create as JSON
+  Parameters: {"name"=>"Ruby Ruby", "age"=>"0", "country"=>"us", "city"=>"wk", "latitude"=>"37.785834", "longitude"=>"-122.406417", "sex"=>"", "email"=>"ruby.rails@outlook.com", "profile_image_url"=>"http://graph.facebook.com/100007095040271/picture", "fb_access_token"=>"CAAH0aKqLGGsBAFOlDH0lqZBEpwvtBH0yP3ZApt8LCsbkWaqNbZAcwMqNUngUlpunkUjU0oVMCkn5fhUyQkzwTbfNCEhA0U0D3Vn6XrWe5mWWBSahIBZCjkZA8vK7J6BjYQ1YgK2ZBnuBQAe3U9msRZCGtxemb1fXSLCFjZAnpa8ZB3msK3iqjC4ZCJZCZBgsTEMvtT8ZD&expires", "fb_link"=>"https://www.facebook.com/ruby.ruby.3388630", "fb_id"=>"100007095040271"}
+MONGODB (58.4ms) taskfishmvp_a_development['users'].find({:email=>"ruby.rails@outlook.com"}).limit(-1)
+Completed 200 OK in 195ms (Views: 19.5ms)
+
+
+Started GET "/api/v1/users/4/events.json" for 192.168.219.128 at 2013-12-13 00:21:12 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"4"}
+MONGODB (15.6ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52a6073fea39a40d18000002')]}})
+Completed 200 OK in 105ms (Views: 89.5ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 00:21:28 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (46.9ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 70ms (Views: 7.8ms)
+
+
+Started GET "/api/v1/users/4/events/21/likes.json" for 192.168.219.128 at 2013-12-13 00:21:28 +0500
+Processing by Api::V1::LikeController#event_likes as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (15.6ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (27.4ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
+Completed 200 OK in 199ms (Views: 23.4ms)
+
+
+Started GET "/api/v1/users/4/events.json" for 192.168.219.128 at 2013-12-13 00:23:38 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"4"}
+MONGODB (48.6ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (12.2ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52a6073fea39a40d18000002')]}})
+Completed 200 OK in 76ms (Views: 24.3ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 00:23:46 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (12.2ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.2ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 40ms (Views: 9.1ms)
+
+
+Started GET "/api/v1/users/4/events/21/likes.json" for 192.168.219.128 at 2013-12-13 00:23:47 +0500
+Processing by Api::V1::LikeController#event_likes as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (15.2ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.2ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (57.8ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (12.2ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
+MONGODB (12.2ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
+Completed 200 OK in 125ms (Views: 18.2ms)
+
+
+Started GET "/api/v1/users/4/events.json" for 192.168.219.128 at 2013-12-13 00:24:48 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"4"}
+MONGODB (13.9ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (13.9ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52a6073fea39a40d18000002')]}})
+Completed 200 OK in 45ms (Views: 27.8ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 00:24:54 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (13.9ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (13.9ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 35ms (Views: 6.9ms)
+
+
+Started GET "/api/v1/users/4/events/21/likes.json" for 192.168.219.128 at 2013-12-13 00:24:54 +0500
+Processing by Api::V1::LikeController#event_likes as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (13.9ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (13.9ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (13.9ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (13.9ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
+MONGODB (13.9ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
+Completed 200 OK in 87ms (Views: 20.8ms)
+
+
+Started POST "/api/v1/users/4/events/21/pictures/create.json" for 192.168.219.128 at 2013-12-13 00:25:10 +0500
+Processing by Api::V1::PictureController#create as JSON
+  Parameters: {"title"=>"xyz", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x3494550 @tempfile=#<File:C:/Users/Ruby/AppData/Local/Temp/RackMultipart20131213-3672-1r307k1>, @original_filename="photo_001.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"avatar\"; filename=\"photo_001.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 32037\r\n">, "user_id"=>"4", "event_id"=>"21"}
+MONGODB (11.0ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (97.7ms) taskfishmvp_a_development['events'].update({:_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, {"_id"=>BSON::ObjectId('52a6073fea39a40d18000002'), "title"=>"test1", "venue"=>"kkkkk", "event_date"=>2013-12-09 18:08:00 UTC, "latitude"=>37.785834, "longitude"=>-122.406417, "created_by_name"=>"Ruby Ruby", "attendant_profile_images"=>["http://pbs.twimg.com/profile_images/2141559681/554865_3251716484321_1009271954_32664883_335004350_n_normal.jpg"], "expire_at"=>2013-12-11 18:08:00 UTC, "user_ids"=>[BSON::ObjectId('52a41133ea39a40fa0000004'), BSON::ObjectId('52a4cf09ea39a41014000002')], "created_by_profile_picture"=>"http://graph.facebook.com/100007095040271/picture", "created_at"=>2013-12-09 18:09:03 UTC, "updated_at"=>2013-12-12 19:25:10 UTC, "id2"=>21, "user_id"=>BSON::ObjectId('52a41133ea39a40fa0000004'), :comments=>[{"_id"=>BSON::ObjectId('52a75ea9ea39a40fbc000003'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:17 UTC, "updated_at"=>2013-12-12 19:25:11 UTC, "commentable_id"=>nil}, {"_id"=>BSON::ObjectId('52a75eaeea39a40fbc000004'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:22 UTC, "updated_at"=>2013-12-12 19:25:11 UTC, "commentable_id"=>nil}, {"_id"=>BSON::ObjectId('52a75eb0ea39a40fbc000005'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:24 UTC, "updated_at"=>2013-12-12 19:25:11 UTC, "commentable_id"=>nil}], :pictures=>[{"_id"=>BSON::ObjectId('52aa0d96ea39a40e58000001'), "user_id"=>4, "title"=>"xyz", "created_at"=>2013-12-12 19:25:11 UTC, "updated_at"=>2013-12-12 19:25:11 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_001.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}]})
+[AWS S3 200 5.685791 0 retries] put_object(:acl=>:public_read,:bucket_name=>"taskfishmvp-a",:content_length=>32037,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: photo_001.jpg,:key=>"pictures/avatars//original/photo_001.jpg")  
+
+Completed 200 OK in 10063ms (Views: 3.9ms)
+
+
+Started GET "/api/v1/users/4/events.json" for 192.168.219.128 at 2013-12-13 00:29:18 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"4"}
+MONGODB (12.0ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (11.0ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52a6073fea39a40d18000002')]}})
+Completed 200 OK in 42ms (Views: 24.0ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 00:29:23 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (16.5ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (59.4ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 86ms (Views: 9.9ms)
+
+
+Started GET "/api/v1/users/4/events/21/likes.json" for 192.168.219.128 at 2013-12-13 00:29:23 +0500
+Processing by Api::V1::LikeController#event_likes as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (13.2ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (13.2ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (13.2ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (13.2ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
+MONGODB (13.2ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
+Completed 200 OK in 83ms (Views: 19.8ms)
+
+
+Started POST "/api/v1/users/4/events/21/pictures/create.json" for 192.168.219.128 at 2013-12-13 00:29:50 +0500
+Processing by Api::V1::PictureController#create as JSON
+  Parameters: {"title"=>"xyz", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x4f3d0d0 @tempfile=#<File:C:/Users/Ruby/AppData/Local/Temp/RackMultipart20131213-3672-1ueh9w3>, @original_filename="photo_002.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"avatar\"; filename=\"photo_002.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 32037\r\n">, "user_id"=>"4", "event_id"=>"21"}
+MONGODB (13.0ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (100.1ms) taskfishmvp_a_development['events'].update({:_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, {"_id"=>BSON::ObjectId('52a6073fea39a40d18000002'), "title"=>"test1", "venue"=>"kkkkk", "event_date"=>2013-12-09 18:08:00 UTC, "latitude"=>37.785834, "longitude"=>-122.406417, "created_by_name"=>"Ruby Ruby", "attendant_profile_images"=>["http://pbs.twimg.com/profile_images/2141559681/554865_3251716484321_1009271954_32664883_335004350_n_normal.jpg"], "expire_at"=>2013-12-11 18:08:00 UTC, "user_ids"=>[BSON::ObjectId('52a41133ea39a40fa0000004'), BSON::ObjectId('52a4cf09ea39a41014000002')], "created_by_profile_picture"=>"http://graph.facebook.com/100007095040271/picture", "created_at"=>2013-12-09 18:09:03 UTC, "updated_at"=>2013-12-12 19:29:50 UTC, "id2"=>21, "user_id"=>BSON::ObjectId('52a41133ea39a40fa0000004'), :comments=>[{"_id"=>BSON::ObjectId('52a75ea9ea39a40fbc000003'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:17 UTC, "updated_at"=>2013-12-12 19:29:50 UTC, "commentable_id"=>nil}, {"_id"=>BSON::ObjectId('52a75eaeea39a40fbc000004'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:22 UTC, "updated_at"=>2013-12-12 19:29:50 UTC, "commentable_id"=>nil}, {"_id"=>BSON::ObjectId('52a75eb0ea39a40fbc000005'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:24 UTC, "updated_at"=>2013-12-12 19:29:50 UTC, "commentable_id"=>nil}], :pictures=>[{"_id"=>BSON::ObjectId('52aa0d96ea39a40e58000001'), "user_id"=>4, "title"=>"xyz", "created_at"=>2013-12-12 19:25:11 UTC, "updated_at"=>2013-12-12 19:29:50 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_001.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}, {"_id"=>BSON::ObjectId('52aa0eaeea39a40e58000002'), "user_id"=>4, "title"=>"xyz", "created_at"=>2013-12-12 19:29:50 UTC, "updated_at"=>2013-12-12 19:29:50 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_002.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}]})
+[AWS S3 200 4.755645 0 retries] put_object(:acl=>:public_read,:bucket_name=>"taskfishmvp-a",:content_length=>32037,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: photo_002.jpg,:key=>"pictures/avatars//original/photo_002.jpg")  
+
+Completed 200 OK in 4955ms (Views: 3.1ms)
+
+
+Started GET "/api/v1/users/4/events.json" for 192.168.219.128 at 2013-12-13 00:49:41 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"4"}
+MONGODB (15.6ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52a6073fea39a40d18000002')]}})
+Completed 200 OK in 86ms (Views: 70.3ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 00:49:46 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (15.5ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (50.4ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 78ms (Views: 11.6ms)
+
+
+Started GET "/api/v1/users/4/events/21/likes.json" for 192.168.219.128 at 2013-12-13 00:49:46 +0500
+Processing by Api::V1::LikeController#event_likes as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (11.6ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.5ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (15.5ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (15.5ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
+MONGODB (42.7ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
+Completed 200 OK in 109ms (Views: 46.5ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 00:49:49 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (13.2ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (13.3ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 40ms (Views: 13.2ms)
+
+
+Started GET "/api/v1/users/4/events.json" for 192.168.219.128 at 2013-12-13 00:53:45 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"4"}
+MONGODB (15.3ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (55.1ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52a6073fea39a40d18000002')]}})
+Completed 200 OK in 86ms (Views: 70.3ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 00:54:09 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (13.7ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (13.7ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 44ms (Views: 17.1ms)
+
+
+Started GET "/api/v1/users/4/events/21/likes.json" for 192.168.219.128 at 2013-12-13 00:54:09 +0500
+Processing by Api::V1::LikeController#event_likes as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (13.7ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (13.6ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (13.7ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (64.2ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
+MONGODB (15.9ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
+Completed 200 OK in 124ms (Views: 19.1ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 00:54:13 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (2.0ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 28ms (Views: 10.2ms)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (11.7ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+MONGODB (90.2ms) taskfishmvp_a_development['events'].find({}).limit(-1).sort([[:_id, -1]])
+MONGODB (15.6ms) taskfishmvp_a_development['events'].find({}).limit(-1).sort([[:_id, -1]])
+MONGODB (11.8ms) taskfishmvp_a_development['events'].find({}).limit(-1).sort([[:_id, -1]])
+MONGODB (15.7ms) taskfishmvp_a_development['events'].find({}).limit(-1).sort([[:_id, -1]])
+MONGODB (11.7ms) taskfishmvp_a_development['events'].find({}).limit(-1).sort([[:_id, -1]])
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (13.5ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (15.6ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+
+
+Started POST "/api/v1/users/create.json" for 192.168.219.128 at 2013-12-13 00:59:44 +0500
+Processing by Api::V1::UserController#create as JSON
+  Parameters: {"name"=>"Ruby Ruby", "age"=>"0", "country"=>"us", "city"=>"wk", "latitude"=>"37.785834", "longitude"=>"-122.406417", "sex"=>"", "email"=>"ruby.rails@outlook.com", "profile_image_url"=>"http://graph.facebook.com/100007095040271/picture", "fb_access_token"=>"CAAH0aKqLGGsBAMfuk2Vavbu9lgIED9H6pTZAjbHdyu951hJreYYBRSLrvINDAYdZA5dH8iJ1TU4DKPTHBDLMVRMpwrhWKgFGP946vpOZCvoeAkpkl4DgDNiZBuC1PH3oHVntkLP4mANQ7sINFDzoqFiZA1CfVwCPJ5XcKBNnMx6qvyiNgXxlIZAwHED5xwifQZD&expires", "fb_link"=>"https://www.facebook.com/ruby.ruby.3388630", "fb_id"=>"100007095040271"}
+MONGODB (17.5ms) taskfishmvp_a_development['users'].find({:email=>"ruby.rails@outlook.com"}).limit(-1)
+Completed 200 OK in 228ms (Views: 10.5ms)
+
+
+Started GET "/api/v1/users/4/events.json" for 192.168.219.128 at 2013-12-13 00:59:45 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"4"}
+MONGODB (14.0ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (49.1ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52a6073fea39a40d18000002')]}})
+Completed 200 OK in 189ms (Views: 157.9ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 01:00:05 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (15.6ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 43ms (Views: 11.7ms)
+
+
+Started GET "/api/v1/users/4/events/21/likes.json" for 192.168.219.128 at 2013-12-13 01:00:05 +0500
+Processing by Api::V1::LikeController#event_likes as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (15.6ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
+Completed 200 OK in 105ms (Views: 19.5ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 01:00:08 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (16.7ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (13.3ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 87ms (Views: 56.7ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 127.0.0.1 at 2013-12-13 01:04:56 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (11.7ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 47ms (Views: 15.6ms)
+
+
+Started GET "/api/v1/users/4/events/21/pictures.json" for 127.0.0.1 at 2013-12-13 01:06:48 +0500
+Processing by Api::V1::PictureController#index as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (15.6ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 39ms (Views: 3.9ms)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (16.0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+MONGODB (15.3ms) taskfishmvp_a_development['events'].find({}).limit(-1).sort([[:_id, -1]])
+MONGODB (15.3ms) taskfishmvp_a_development['events'].find({}).limit(-1).sort([[:_id, -1]])
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (12.0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+
+
+Started POST "/api/v1/users/create.json" for 192.168.219.128 at 2013-12-13 01:11:29 +0500
+Processing by Api::V1::UserController#create as JSON
+  Parameters: {"name"=>"Ruby Ruby", "age"=>"0", "country"=>"us", "city"=>"wk", "latitude"=>"37.785834", "longitude"=>"-122.406417", "sex"=>"", "email"=>"ruby.rails@outlook.com", "profile_image_url"=>"http://graph.facebook.com/100007095040271/picture", "fb_access_token"=>"CAAH0aKqLGGsBAATyD3OiQGAGG9HPguW2JnrD4xDjpVCZCezaKbZCdRjVVLuiLWSQ1uZCWArmfZBxj5WEjZC9w1PAtag6yVDcEGaB271wsKbVrN9GHQmfLIPZBaoBS6YqiTDOTRUiZCIiARhh6bJwLIbqgHKZCBZABgKZA7GuLzZARZArCcSPq7kIlTUZCCsxmVeHJwoAZD&expires", "fb_link"=>"https://www.facebook.com/ruby.ruby.3388630", "fb_id"=>"100007095040271"}
+MONGODB (15.7ms) taskfishmvp_a_development['users'].find({:email=>"ruby.rails@outlook.com"}).limit(-1)
+Completed 200 OK in 221ms (Views: 11.7ms)
+
+
+Started GET "/api/v1/users/4/events.json" for 192.168.219.128 at 2013-12-13 01:11:31 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"4"}
+MONGODB (11.7ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52a6073fea39a40d18000002')]}})
+Completed 200 OK in 207ms (Views: 132.8ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 01:11:36 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (15.0ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.0ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 42ms (Views: 12.0ms)
+
+
+Started GET "/api/v1/users/4/events/21/likes.json" for 192.168.219.128 at 2013-12-13 01:11:36 +0500
+Processing by Api::V1::LikeController#event_likes as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (12.0ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.0ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
+Completed 200 OK in 96ms (Views: 18.0ms)
+
+
+Started POST "/api/v1/users/4/events/21/pictures/create.json" for 192.168.219.128 at 2013-12-13 01:11:56 +0500
+Processing by Api::V1::PictureController#create as JSON
+  Parameters: {"title"=>"xyz", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x4dc0730 @tempfile=#<File:C:/Users/Ruby/AppData/Local/Temp/RackMultipart20131213-1648-1rjw2l>, @original_filename="photo_003.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"avatar\"; filename=\"photo_003.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 32037\r\n">, "user_id"=>"4", "event_id"=>"21"}
+MONGODB (53.0ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (23.0ms) taskfishmvp_a_development['events'].update({:_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, {"_id"=>BSON::ObjectId('52a6073fea39a40d18000002'), "title"=>"test1", "venue"=>"kkkkk", "event_date"=>2013-12-09 18:08:00 UTC, "latitude"=>37.785834, "longitude"=>-122.406417, "created_by_name"=>"Ruby Ruby", "attendant_profile_images"=>["http://pbs.twimg.com/profile_images/2141559681/554865_3251716484321_1009271954_32664883_335004350_n_normal.jpg"], "expire_at"=>2013-12-11 18:08:00 UTC, "user_ids"=>[BSON::ObjectId('52a41133ea39a40fa0000004'), BSON::ObjectId('52a4cf09ea39a41014000002')], "created_by_profile_picture"=>"http://graph.facebook.com/100007095040271/picture", "created_at"=>2013-12-09 18:09:03 UTC, "updated_at"=>2013-12-12 20:11:56 UTC, "id2"=>21, "user_id"=>BSON::ObjectId('52a41133ea39a40fa0000004'), :comments=>[{"_id"=>BSON::ObjectId('52a75ea9ea39a40fbc000003'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:17 UTC, "updated_at"=>2013-12-12 20:11:56 UTC, "commentable_id"=>nil}, {"_id"=>BSON::ObjectId('52a75eaeea39a40fbc000004'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:22 UTC, "updated_at"=>2013-12-12 20:11:56 UTC, "commentable_id"=>nil}, {"_id"=>BSON::ObjectId('52a75eb0ea39a40fbc000005'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:24 UTC, "updated_at"=>2013-12-12 20:11:56 UTC, "commentable_id"=>nil}], :pictures=>[{"_id"=>BSON::ObjectId('52aa0d96ea39a40e58000001'), "user_id"=>4, "title"=>"xyz", "created_at"=>2013-12-12 19:25:11 UTC, "updated_at"=>2013-12-12 20:11:56 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_001.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}, {"_id"=>BSON::ObjectId('52aa0eaeea39a40e58000002'), "user_id"=>4, "title"=>"xyz", "created_at"=>2013-12-12 19:29:50 UTC, "updated_at"=>2013-12-12 20:11:56 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_002.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}, {"_id"=>BSON::ObjectId('52aa188cea39a40670000001'), "user_id"=>4, "title"=>"xyz", "image_url"=>"http://s3.amazonaws.com/taskfishmvp-a/pictures/avatars//original/photo_003.jpg", "created_at"=>2013-12-12 20:11:56 UTC, "updated_at"=>2013-12-12 20:11:56 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_003.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}]})
+[AWS S3 200 4.176748 0 retries] put_object(:acl=>:public_read,:bucket_name=>"taskfishmvp-a",:content_length=>32037,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: photo_003.jpg,:key=>"pictures/avatars//original/photo_003.jpg")  
+
+Completed 200 OK in 6146ms (Views: 3.0ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 01:12:06 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (15.4ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (12.4ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 96ms (Views: 18.5ms)
+
+
+Started GET "/api/v1/users/4/events.json" for 192.168.219.128 at 2013-12-13 01:14:16 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"4"}
+MONGODB (12.7ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (12.7ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52a6073fea39a40d18000002')]}})
+Completed 200 OK in 48ms (Views: 31.8ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 01:14:24 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (14.2ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (42.5ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 77ms (Views: 14.2ms)
+
+
+Started GET "/api/v1/users/4/events/21/likes.json" for 192.168.219.128 at 2013-12-13 01:14:24 +0500
+Processing by Api::V1::LikeController#event_likes as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (14.2ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (14.2ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (14.2ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (14.2ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
+MONGODB (14.2ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
+Completed 200 OK in 82ms (Views: 19.8ms)
+
+
+Started POST "/api/v1/users/4/events/21/pictures/create.json" for 192.168.219.128 at 2013-12-13 01:14:41 +0500
+Processing by Api::V1::PictureController#create as JSON
+  Parameters: {"title"=>"xyz", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x374f580 @tempfile=#<File:C:/Users/Ruby/AppData/Local/Temp/RackMultipart20131213-1648-c5l9d6>, @original_filename="photo_004.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"avatar\"; filename=\"photo_004.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 32037\r\n">, "user_id"=>"4", "event_id"=>"21"}
+MONGODB (12.0ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['events'].update({:_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, {"_id"=>BSON::ObjectId('52a6073fea39a40d18000002'), "title"=>"test1", "venue"=>"kkkkk", "event_date"=>2013-12-09 18:08:00 UTC, "latitude"=>37.785834, "longitude"=>-122.406417, "created_by_name"=>"Ruby Ruby", "attendant_profile_images"=>["http://pbs.twimg.com/profile_images/2141559681/554865_3251716484321_1009271954_32664883_335004350_n_normal.jpg"], "expire_at"=>2013-12-11 18:08:00 UTC, "user_ids"=>[BSON::ObjectId('52a41133ea39a40fa0000004'), BSON::ObjectId('52a4cf09ea39a41014000002')], "created_by_profile_picture"=>"http://graph.facebook.com/100007095040271/picture", "created_at"=>2013-12-09 18:09:03 UTC, "updated_at"=>2013-12-12 20:14:41 UTC, "id2"=>21, "user_id"=>BSON::ObjectId('52a41133ea39a40fa0000004'), :comments=>[{"_id"=>BSON::ObjectId('52a75ea9ea39a40fbc000003'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:17 UTC, "updated_at"=>2013-12-12 20:14:41 UTC, "commentable_id"=>nil}, {"_id"=>BSON::ObjectId('52a75eaeea39a40fbc000004'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:22 UTC, "updated_at"=>2013-12-12 20:14:41 UTC, "commentable_id"=>nil}, {"_id"=>BSON::ObjectId('52a75eb0ea39a40fbc000005'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:24 UTC, "updated_at"=>2013-12-12 20:14:41 UTC, "commentable_id"=>nil}], :pictures=>[{"_id"=>BSON::ObjectId('52aa0d96ea39a40e58000001'), "user_id"=>4, "title"=>"xyz", "created_at"=>2013-12-12 19:25:11 UTC, "updated_at"=>2013-12-12 20:14:41 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_001.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}, {"_id"=>BSON::ObjectId('52aa0eaeea39a40e58000002'), "user_id"=>4, "title"=>"xyz", "created_at"=>2013-12-12 19:29:50 UTC, "updated_at"=>2013-12-12 20:14:41 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_002.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}, {"_id"=>BSON::ObjectId('52aa188cea39a40670000001'), "user_id"=>4, "title"=>"xyz", "image_url"=>"http://s3.amazonaws.com/taskfishmvp-a/pictures/avatars//original/photo_003.jpg", "created_at"=>2013-12-12 20:11:56 UTC, "updated_at"=>2013-12-12 20:14:41 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_003.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}, {"_id"=>BSON::ObjectId('52aa1931ea39a40670000002'), "user_id"=>4, "title"=>"xyz", "image_url"=>"http://s3.amazonaws.com/taskfishmvp-a/pictures/avatars//original/photo_004.jpg", "created_at"=>2013-12-12 20:14:41 UTC, "updated_at"=>2013-12-12 20:14:41 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_004.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}]})
+[AWS S3 200 4.397157 0 retries] put_object(:acl=>:public_read,:bucket_name=>"taskfishmvp-a",:content_length=>32037,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: photo_004.jpg,:key=>"pictures/avatars//original/photo_004.jpg")  
+
+Completed 200 OK in 4584ms (Views: 2.6ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 01:14:51 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (66.3ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (12.8ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 105ms (Views: 17.9ms)
+
+
+Started GET "/api/v1/users/4/events.json" for 192.168.219.128 at 2013-12-13 01:16:10 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"4"}
+MONGODB (12.0ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (23.0ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52a6073fea39a40d18000002')]}})
+Completed 200 OK in 56ms (Views: 41.0ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 01:16:16 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (13.0ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (13.0ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 45ms (Views: 16.2ms)
+
+
+Started GET "/api/v1/users/4/events/21/likes.json" for 192.168.219.128 at 2013-12-13 01:16:16 +0500
+Processing by Api::V1::LikeController#event_likes as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (16.2ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (55.2ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (13.0ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (16.2ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
+MONGODB (16.2ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
+Completed 200 OK in 123ms (Views: 19.5ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 01:16:18 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (16.2ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (16.2ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 49ms (Views: 16.2ms)
+
+
+Started GET "/api/v1/users/4/events.json" for 192.168.219.128 at 2013-12-13 01:22:01 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"4"}
+MONGODB (15.6ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (11.7ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52a6073fea39a40d18000002')]}})
+Completed 200 OK in 215ms (Views: 85.9ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 01:22:12 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (15.6ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 55ms (Views: 19.5ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 01:22:16 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (15.7ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (58.6ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 90ms (Views: 15.6ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 01:22:18 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (11.7ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 50ms (Views: 18.8ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 01:22:20 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (13.4ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (13.4ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 47ms (Views: 16.7ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 01:22:30 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (14.3ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (14.3ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 46ms (Views: 14.3ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 01:22:32 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (11.4ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (14.3ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 46ms (Views: 17.1ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 127.0.0.1 at 2013-12-13 01:23:18 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (64.8ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 100ms (Views: 19.5ms)
+
+
+Started GET "/api/v1/users/4/events.json" for 192.168.219.128 at 2013-12-13 01:26:35 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"4"}
+MONGODB (35.2ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.2ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52a6073fea39a40d18000002')]}})
+Completed 200 OK in 213ms (Views: 92.1ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 01:27:07 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (82.0ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 117ms (Views: 19.5ms)
+
+
+Started GET "/api/v1/users/4/events/21/likes.json" for 192.168.219.128 at 2013-12-13 01:27:07 +0500
+Processing by Api::V1::LikeController#event_likes as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (15.6ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
+Completed 200 OK in 82ms (Views: 19.5ms)
+
+
+Started GET "/api/v1/users/4/events.json" for 192.168.219.128 at 2013-12-13 01:34:28 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"4"}
+MONGODB (13.8ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52a6073fea39a40d18000002')]}})
+Completed 200 OK in 46ms (Views: 31.3ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 01:34:37 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (11.0ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (11.0ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 44ms (Views: 17.0ms)
+
+
+Started GET "/api/v1/users/4/events/21/likes.json" for 192.168.219.128 at 2013-12-13 01:34:37 +0500
+Processing by Api::V1::LikeController#event_likes as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (14.5ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (14.5ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (25.4ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (14.5ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
+MONGODB (14.5ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
+Completed 200 OK in 94ms (Views: 18.1ms)
+
+
+Started GET "/api/v1/users/4/events.json" for 192.168.219.128 at 2013-12-13 01:34:45 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"4"}
+MONGODB (12.6ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.7ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52a6073fea39a40d18000002')]}})
+Completed 200 OK in 47ms (Views: 34.6ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 01:36:57 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (64.3ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (12.9ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 248ms (Views: 19.3ms)
+
+
+Started GET "/api/v1/users/4/events/21/likes.json" for 192.168.219.128 at 2013-12-13 01:36:58 +0500
+Processing by Api::V1::LikeController#event_likes as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (12.9ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (16.1ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (12.9ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (16.1ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
+MONGODB (77.2ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
+Completed 200 OK in 177ms (Views: 86.8ms)
+
+
+Started GET "/api/v1/users/4/events.json" for 192.168.219.128 at 2013-12-13 01:39:21 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"4"}
+MONGODB (16.6ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (13.2ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52a6073fea39a40d18000002')]}})
+Completed 200 OK in 192ms (Views: 95.7ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 01:39:30 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (13.2ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (13.2ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 53ms (Views: 19.8ms)
+
+
+Started GET "/api/v1/users/4/events/21/likes.json" for 192.168.219.128 at 2013-12-13 01:39:30 +0500
+Processing by Api::V1::LikeController#event_likes as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (13.2ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (13.2ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (13.2ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (16.5ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
+MONGODB (13.2ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
+Completed 200 OK in 86ms (Views: 19.8ms)
+
+
+Started GET "/api/v1/users/4/events/21/like.json" for 192.168.219.128 at 2013-12-13 01:39:32 +0500
+Processing by Api::V1::LikeController#like_event as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (14.2ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (14.2ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (56.9ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (14.2ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (14.2ms) taskfishmvp_a_development['likes'].remove({:_id=>{:$in=>[BSON::ObjectId('52a8ab86ea39a41658000001')]}})
+Completed 200 OK in 117ms (Views: 0.0ms)
+
+
+Started GET "/api/v1/users/4/events/21/likes.json" for 192.168.219.128 at 2013-12-13 01:39:32 +0500
+Processing by Api::V1::LikeController#event_likes as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (11.0ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (11.0ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (11.0ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
+MONGODB (11.1ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
+Completed 200 OK in 69ms (Views: 13.1ms)
+
+
+Started GET "/api/v1/users/4/events/21/like.json" for 192.168.219.128 at 2013-12-13 01:39:33 +0500
+Processing by Api::V1::LikeController#like_event as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (56.9ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (14.2ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (14.2ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (24.9ms) taskfishmvp_a_development['$cmd'].find({"count"=>"sequences", "query"=>{"seq_name"=>"Like"}, "fields"=>nil}).limit(-1)
+MONGODB (163.7ms) taskfishmvp_a_development['$cmd'].find({:findandmodify=>"sequences", "query"=>{"seq_name"=>"Like"}, "update"=>{"$inc"=>{"number"=>1}}, "new"=>true}).limit(-1)
+MONGODB (14.2ms) taskfishmvp_a_development['likes'].insert([{"_id"=>BSON::ObjectId('52aa1f05ea39a40670000003'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-12 20:39:33 UTC, "updated_at"=>2013-12-12 20:39:33 UTC, "id2"=>33, "event_id"=>nil}])
+MONGODB (14.2ms) taskfishmvp_a_development['likes'].update({:_id=>BSON::ObjectId('52aa1f05ea39a40670000003')}, {"_id"=>BSON::ObjectId('52aa1f05ea39a40670000003'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-12 20:39:33 UTC, "updated_at"=>2013-12-12 20:39:33 UTC, "id2"=>33, "event_id"=>BSON::ObjectId('52a6073fea39a40d18000002')})
+MONGODB (14.3ms) taskfishmvp_a_development['events'].update({:_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, {"_id"=>BSON::ObjectId('52a6073fea39a40d18000002'), "title"=>"test1", "venue"=>"kkkkk", "event_date"=>2013-12-09 18:08:00 UTC, "latitude"=>37.785834, "longitude"=>-122.406417, "created_by_name"=>"Ruby Ruby", "attendant_profile_images"=>["http://pbs.twimg.com/profile_images/2141559681/554865_3251716484321_1009271954_32664883_335004350_n_normal.jpg"], "expire_at"=>2013-12-11 18:08:00 UTC, "user_ids"=>[BSON::ObjectId('52a41133ea39a40fa0000004'), BSON::ObjectId('52a4cf09ea39a41014000002')], "created_by_profile_picture"=>"http://graph.facebook.com/100007095040271/picture", "created_at"=>2013-12-09 18:09:03 UTC, "updated_at"=>2013-12-12 20:39:33 UTC, "id2"=>21, "user_id"=>BSON::ObjectId('52a41133ea39a40fa0000004'), :comments=>[{"_id"=>BSON::ObjectId('52a75ea9ea39a40fbc000003'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:17 UTC, "updated_at"=>2013-12-12 20:39:33 UTC, "commentable_id"=>nil}, {"_id"=>BSON::ObjectId('52a75eaeea39a40fbc000004'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:22 UTC, "updated_at"=>2013-12-12 20:39:33 UTC, "commentable_id"=>nil}, {"_id"=>BSON::ObjectId('52a75eb0ea39a40fbc000005'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:24 UTC, "updated_at"=>2013-12-12 20:39:33 UTC, "commentable_id"=>nil}], :pictures=>[{"_id"=>BSON::ObjectId('52aa0d96ea39a40e58000001'), "user_id"=>4, "title"=>"xyz", "created_at"=>2013-12-12 19:25:11 UTC, "updated_at"=>2013-12-12 20:39:33 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_001.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}, {"_id"=>BSON::ObjectId('52aa0eaeea39a40e58000002'), "user_id"=>4, "title"=>"xyz", "created_at"=>2013-12-12 19:29:50 UTC, "updated_at"=>2013-12-12 20:39:33 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_002.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}, {"_id"=>BSON::ObjectId('52aa188cea39a40670000001'), "user_id"=>4, "title"=>"xyz", "image_url"=>"http://s3.amazonaws.com/taskfishmvp-a/pictures/avatars//original/photo_003.jpg", "created_at"=>2013-12-12 20:11:56 UTC, "updated_at"=>2013-12-12 20:39:33 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_003.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}, {"_id"=>BSON::ObjectId('52aa1931ea39a40670000002'), "user_id"=>4, "title"=>"xyz", "image_url"=>"http://s3.amazonaws.com/taskfishmvp-a/pictures/avatars//original/photo_004.jpg", "created_at"=>2013-12-12 20:14:41 UTC, "updated_at"=>2013-12-12 20:39:33 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_004.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}]})
+Completed 200 OK in 370ms (Views: 0.0ms)
+
+
+Started GET "/api/v1/users/4/events/21/likes.json" for 192.168.219.128 at 2013-12-13 01:39:33 +0500
+Processing by Api::V1::LikeController#event_likes as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (57.0ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (14.2ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (14.2ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (14.2ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
+MONGODB (14.2ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
+Completed 200 OK in 128ms (Views: 17.8ms)
+
+
+Started POST "/api/v1/users/4/events/21/comment.json" for 192.168.219.128 at 2013-12-13 01:39:52 +0500
+Processing by Api::V1::CommentController#create_event_comment as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (61.6ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (10.9ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (14.5ms) taskfishmvp_a_development['events'].update({:_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, {"_id"=>BSON::ObjectId('52a6073fea39a40d18000002'), "title"=>"test1", "venue"=>"kkkkk", "event_date"=>2013-12-09 18:08:00 UTC, "latitude"=>37.785834, "longitude"=>-122.406417, "created_by_name"=>"Ruby Ruby", "attendant_profile_images"=>["http://pbs.twimg.com/profile_images/2141559681/554865_3251716484321_1009271954_32664883_335004350_n_normal.jpg"], "expire_at"=>2013-12-11 18:08:00 UTC, "user_ids"=>[BSON::ObjectId('52a41133ea39a40fa0000004'), BSON::ObjectId('52a4cf09ea39a41014000002')], "created_by_profile_picture"=>"http://graph.facebook.com/100007095040271/picture", "created_at"=>2013-12-09 18:09:03 UTC, "updated_at"=>2013-12-12 20:39:53 UTC, "id2"=>21, "user_id"=>BSON::ObjectId('52a41133ea39a40fa0000004'), :comments=>[{"_id"=>BSON::ObjectId('52a75ea9ea39a40fbc000003'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:17 UTC, "updated_at"=>2013-12-12 20:39:53 UTC, "commentable_id"=>nil}, {"_id"=>BSON::ObjectId('52a75eaeea39a40fbc000004'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:22 UTC, "updated_at"=>2013-12-12 20:39:53 UTC, "commentable_id"=>nil}, {"_id"=>BSON::ObjectId('52a75eb0ea39a40fbc000005'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:24 UTC, "updated_at"=>2013-12-12 20:39:53 UTC, "commentable_id"=>nil}, {"_id"=>BSON::ObjectId('52aa1f19ea39a40670000004'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-12 20:39:53 UTC, "updated_at"=>2013-12-12 20:39:53 UTC, "commentable_id"=>nil}], :pictures=>[{"_id"=>BSON::ObjectId('52aa0d96ea39a40e58000001'), "user_id"=>4, "title"=>"xyz", "created_at"=>2013-12-12 19:25:11 UTC, "updated_at"=>2013-12-12 20:39:53 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_001.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}, {"_id"=>BSON::ObjectId('52aa0eaeea39a40e58000002'), "user_id"=>4, "title"=>"xyz", "created_at"=>2013-12-12 19:29:50 UTC, "updated_at"=>2013-12-12 20:39:53 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_002.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}, {"_id"=>BSON::ObjectId('52aa188cea39a40670000001'), "user_id"=>4, "title"=>"xyz", "image_url"=>"http://s3.amazonaws.com/taskfishmvp-a/pictures/avatars//original/photo_003.jpg", "created_at"=>2013-12-12 20:11:56 UTC, "updated_at"=>2013-12-12 20:39:53 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_003.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}, {"_id"=>BSON::ObjectId('52aa1931ea39a40670000002'), "user_id"=>4, "title"=>"xyz", "image_url"=>"http://s3.amazonaws.com/taskfishmvp-a/pictures/avatars//original/photo_004.jpg", "created_at"=>2013-12-12 20:14:41 UTC, "updated_at"=>2013-12-12 20:39:53 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_004.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}]})
+Completed 200 OK in 130ms (Views: 0.0ms)
+
+
+Started GET "/api/v1/users/4/events.json" for 192.168.219.128 at 2013-12-13 01:40:00 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"4"}
+MONGODB (1873.7ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (12.4ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52a6073fea39a40d18000002')]}})
+Completed 200 OK in 1913ms (Views: 39.8ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 01:40:05 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (15.5ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.5ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 50ms (Views: 18.6ms)
+
+
+Started GET "/api/v1/users/4/events/21/likes.json" for 192.168.219.128 at 2013-12-13 01:40:06 +0500
+Processing by Api::V1::LikeController#event_likes as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (15.5ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (12.4ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (12.4ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (15.5ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
+MONGODB (12.4ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
+Completed 200 OK in 81ms (Views: 18.6ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 127.0.0.1 at 2013-12-13 01:40:18 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (11.9ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (14.9ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 48ms (Views: 17.9ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 127.0.0.1 at 2013-12-13 01:42:19 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (62.0ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (13.4ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 226ms (Views: 23.4ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 127.0.0.1 at 2013-12-13 01:42:58 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (15.6ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (11.7ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 184ms (Views: 23.4ms)
+
+
+Started POST "/api/v1/users/4/events/21/comment.json" for 192.168.219.128 at 2013-12-13 01:43:19 +0500
+Processing by Api::V1::CommentController#create_event_comment as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (13.4ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (11.0ms) taskfishmvp_a_development['events'].update({:_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, {"_id"=>BSON::ObjectId('52a6073fea39a40d18000002'), "title"=>"test1", "venue"=>"kkkkk", "event_date"=>2013-12-09 18:08:00 UTC, "latitude"=>37.785834, "longitude"=>-122.406417, "created_by_name"=>"Ruby Ruby", "attendant_profile_images"=>["http://pbs.twimg.com/profile_images/2141559681/554865_3251716484321_1009271954_32664883_335004350_n_normal.jpg"], "expire_at"=>2013-12-11 18:08:00 UTC, "user_ids"=>[BSON::ObjectId('52a41133ea39a40fa0000004'), BSON::ObjectId('52a4cf09ea39a41014000002')], "created_by_profile_picture"=>"http://graph.facebook.com/100007095040271/picture", "created_at"=>2013-12-09 18:09:03 UTC, "updated_at"=>2013-12-12 20:43:19 UTC, "id2"=>21, "user_id"=>BSON::ObjectId('52a41133ea39a40fa0000004'), :comments=>[{"_id"=>BSON::ObjectId('52a75ea9ea39a40fbc000003'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:17 UTC, "updated_at"=>2013-12-12 20:43:19 UTC}, {"_id"=>BSON::ObjectId('52a75eaeea39a40fbc000004'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:22 UTC, "updated_at"=>2013-12-12 20:43:19 UTC}, {"_id"=>BSON::ObjectId('52a75eb0ea39a40fbc000005'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:24 UTC, "updated_at"=>2013-12-12 20:43:19 UTC}, {"_id"=>BSON::ObjectId('52aa1f19ea39a40670000004'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-12 20:39:53 UTC, "updated_at"=>2013-12-12 20:43:19 UTC}, {"_id"=>BSON::ObjectId('52aa1fe7ea39a40670000005'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-12 20:43:19 UTC, "updated_at"=>2013-12-12 20:43:19 UTC}], :pictures=>[{"_id"=>BSON::ObjectId('52aa0d96ea39a40e58000001'), "user_id"=>4, "title"=>"xyz", "created_at"=>2013-12-12 19:25:11 UTC, "updated_at"=>2013-12-12 20:43:19 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_001.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}, {"_id"=>BSON::ObjectId('52aa0eaeea39a40e58000002'), "user_id"=>4, "title"=>"xyz", "created_at"=>2013-12-12 19:29:50 UTC, "updated_at"=>2013-12-12 20:43:19 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_002.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}, {"_id"=>BSON::ObjectId('52aa188cea39a40670000001'), "user_id"=>4, "title"=>"xyz", "image_url"=>"http://s3.amazonaws.com/taskfishmvp-a/pictures/avatars//original/photo_003.jpg", "created_at"=>2013-12-12 20:11:56 UTC, "updated_at"=>2013-12-12 20:43:19 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_003.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}, {"_id"=>BSON::ObjectId('52aa1931ea39a40670000002'), "user_id"=>4, "title"=>"xyz", "image_url"=>"http://s3.amazonaws.com/taskfishmvp-a/pictures/avatars//original/photo_004.jpg", "created_at"=>2013-12-12 20:14:41 UTC, "updated_at"=>2013-12-12 20:43:19 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_004.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}]})
+Completed 200 OK in 76ms (Views: 0.0ms)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (23.4ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 127.0.0.1 at 2013-12-13 01:44:27 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (15.6ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (11.7ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 51ms (Views: 19.5ms)
+
+
+Started GET "/api/v1/users/4/events.json" for 192.168.219.128 at 2013-12-13 01:46:06 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"4"}
+MONGODB (15.0ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.1ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52a6073fea39a40d18000002')]}})
+Completed 200 OK in 124ms (Views: 37.6ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 01:46:11 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (15.0ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.0ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 53ms (Views: 22.5ms)
+
+
+Started GET "/api/v1/users/4/events/21/likes.json" for 192.168.219.128 at 2013-12-13 01:46:11 +0500
+Processing by Api::V1::LikeController#event_likes as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (11.3ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.0ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (59.0ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (14.2ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
+MONGODB (14.2ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
+Completed 200 OK in 128ms (Views: 17.8ms)
+
+
+Started POST "/api/v1/users/4/events/21/comment.json" for 192.168.219.128 at 2013-12-13 01:46:22 +0500
+Processing by Api::V1::CommentController#create_event_comment as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (12.8ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (12.8ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (12.8ms) taskfishmvp_a_development['events'].update({:_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, {"_id"=>BSON::ObjectId('52a6073fea39a40d18000002'), "title"=>"test1", "venue"=>"kkkkk", "event_date"=>2013-12-09 18:08:00 UTC, "latitude"=>37.785834, "longitude"=>-122.406417, "created_by_name"=>"Ruby Ruby", "attendant_profile_images"=>["http://pbs.twimg.com/profile_images/2141559681/554865_3251716484321_1009271954_32664883_335004350_n_normal.jpg"], "expire_at"=>2013-12-11 18:08:00 UTC, "user_ids"=>[BSON::ObjectId('52a41133ea39a40fa0000004'), BSON::ObjectId('52a4cf09ea39a41014000002')], "created_by_profile_picture"=>"http://graph.facebook.com/100007095040271/picture", "created_at"=>2013-12-09 18:09:03 UTC, "updated_at"=>2013-12-12 20:46:22 UTC, "id2"=>21, "user_id"=>BSON::ObjectId('52a41133ea39a40fa0000004'), :comments=>[{"_id"=>BSON::ObjectId('52a75ea9ea39a40fbc000003'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:17 UTC, "updated_at"=>2013-12-12 20:46:22 UTC}, {"_id"=>BSON::ObjectId('52a75eaeea39a40fbc000004'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:22 UTC, "updated_at"=>2013-12-12 20:46:22 UTC}, {"_id"=>BSON::ObjectId('52a75eb0ea39a40fbc000005'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:24 UTC, "updated_at"=>2013-12-12 20:46:22 UTC}, {"_id"=>BSON::ObjectId('52aa1f19ea39a40670000004'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-12 20:39:53 UTC, "updated_at"=>2013-12-12 20:46:22 UTC}, {"_id"=>BSON::ObjectId('52aa1fe7ea39a40670000005'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-12 20:43:19 UTC, "updated_at"=>2013-12-12 20:46:22 UTC}, {"_id"=>BSON::ObjectId('52aa209eea39a40670000006'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-12 20:46:22 UTC, "updated_at"=>2013-12-12 20:46:22 UTC}], :pictures=>[{"_id"=>BSON::ObjectId('52aa0d96ea39a40e58000001'), "user_id"=>4, "title"=>"xyz", "created_at"=>2013-12-12 19:25:11 UTC, "updated_at"=>2013-12-12 20:46:22 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_001.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}, {"_id"=>BSON::ObjectId('52aa0eaeea39a40e58000002'), "user_id"=>4, "title"=>"xyz", "created_at"=>2013-12-12 19:29:50 UTC, "updated_at"=>2013-12-12 20:46:22 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_002.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}, {"_id"=>BSON::ObjectId('52aa188cea39a40670000001'), "user_id"=>4, "title"=>"xyz", "image_url"=>"http://s3.amazonaws.com/taskfishmvp-a/pictures/avatars//original/photo_003.jpg", "created_at"=>2013-12-12 20:11:56 UTC, "updated_at"=>2013-12-12 20:46:22 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_003.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}, {"_id"=>BSON::ObjectId('52aa1931ea39a40670000002'), "user_id"=>4, "title"=>"xyz", "image_url"=>"http://s3.amazonaws.com/taskfishmvp-a/pictures/avatars//original/photo_004.jpg", "created_at"=>2013-12-12 20:14:41 UTC, "updated_at"=>2013-12-12 20:46:22 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_004.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}]})
+Completed 200 OK in 77ms (Views: 3.2ms)
+
+
+Started GET "/api/v1/users/4/events.json" for 192.168.219.128 at 2013-12-13 01:46:27 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"4"}
+MONGODB (14.8ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (14.8ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52a6073fea39a40d18000002')]}})
+Completed 200 OK in 56ms (Views: 40.7ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 01:46:31 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (12.2ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (12.2ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 52ms (Views: 21.4ms)
+
+
+Started GET "/api/v1/users/4/events/21/likes.json" for 192.168.219.128 at 2013-12-13 01:46:31 +0500
+Processing by Api::V1::LikeController#event_likes as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (48.9ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.3ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (12.2ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (12.2ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
+MONGODB (12.2ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
+Completed 200 OK in 116ms (Views: 18.3ms)
+
+
+Started POST "/api/v1/users/4/events/21/comment.json" for 192.168.219.128 at 2013-12-13 01:46:39 +0500
+Processing by Api::V1::CommentController#create_event_comment as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (15.3ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.3ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (12.2ms) taskfishmvp_a_development['events'].update({:_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, {"_id"=>BSON::ObjectId('52a6073fea39a40d18000002'), "title"=>"test1", "venue"=>"kkkkk", "event_date"=>2013-12-09 18:08:00 UTC, "latitude"=>37.785834, "longitude"=>-122.406417, "created_by_name"=>"Ruby Ruby", "attendant_profile_images"=>["http://pbs.twimg.com/profile_images/2141559681/554865_3251716484321_1009271954_32664883_335004350_n_normal.jpg"], "expire_at"=>2013-12-11 18:08:00 UTC, "user_ids"=>[BSON::ObjectId('52a41133ea39a40fa0000004'), BSON::ObjectId('52a4cf09ea39a41014000002')], "created_by_profile_picture"=>"http://graph.facebook.com/100007095040271/picture", "created_at"=>2013-12-09 18:09:03 UTC, "updated_at"=>2013-12-12 20:46:39 UTC, "id2"=>21, "user_id"=>BSON::ObjectId('52a41133ea39a40fa0000004'), :comments=>[{"_id"=>BSON::ObjectId('52a75ea9ea39a40fbc000003'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:17 UTC, "updated_at"=>2013-12-12 20:46:39 UTC}, {"_id"=>BSON::ObjectId('52a75eaeea39a40fbc000004'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:22 UTC, "updated_at"=>2013-12-12 20:46:39 UTC}, {"_id"=>BSON::ObjectId('52a75eb0ea39a40fbc000005'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:24 UTC, "updated_at"=>2013-12-12 20:46:39 UTC}, {"_id"=>BSON::ObjectId('52aa1f19ea39a40670000004'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-12 20:39:53 UTC, "updated_at"=>2013-12-12 20:46:39 UTC}, {"_id"=>BSON::ObjectId('52aa1fe7ea39a40670000005'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-12 20:43:19 UTC, "updated_at"=>2013-12-12 20:46:39 UTC}, {"_id"=>BSON::ObjectId('52aa209eea39a40670000006'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-12 20:46:22 UTC, "updated_at"=>2013-12-12 20:46:39 UTC}, {"_id"=>BSON::ObjectId('52aa20afea39a40670000007'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-12 20:46:39 UTC, "updated_at"=>2013-12-12 20:46:39 UTC}], :pictures=>[{"_id"=>BSON::ObjectId('52aa0d96ea39a40e58000001'), "user_id"=>4, "title"=>"xyz", "created_at"=>2013-12-12 19:25:11 UTC, "updated_at"=>2013-12-12 20:46:39 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_001.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}, {"_id"=>BSON::ObjectId('52aa0eaeea39a40e58000002'), "user_id"=>4, "title"=>"xyz", "created_at"=>2013-12-12 19:29:50 UTC, "updated_at"=>2013-12-12 20:46:39 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_002.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}, {"_id"=>BSON::ObjectId('52aa188cea39a40670000001'), "user_id"=>4, "title"=>"xyz", "image_url"=>"http://s3.amazonaws.com/taskfishmvp-a/pictures/avatars//original/photo_003.jpg", "created_at"=>2013-12-12 20:11:56 UTC, "updated_at"=>2013-12-12 20:46:39 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_003.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}, {"_id"=>BSON::ObjectId('52aa1931ea39a40670000002'), "user_id"=>4, "title"=>"xyz", "image_url"=>"http://s3.amazonaws.com/taskfishmvp-a/pictures/avatars//original/photo_004.jpg", "created_at"=>2013-12-12 20:14:41 UTC, "updated_at"=>2013-12-12 20:46:39 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_004.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}]})
+Completed 200 OK in 76ms (Views: 0.0ms)
+
+
+Started GET "/api/v1/users/4/events.json" for 192.168.219.128 at 2013-12-13 01:48:35 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"4"}
+MONGODB (67.9ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.4ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52a6073fea39a40d18000002')]}})
+Completed 200 OK in 108ms (Views: 37.0ms)
+
+
+Started GET "/api/v1/users/4/events/21.json" for 192.168.219.128 at 2013-12-13 01:48:44 +0500
+Processing by Api::V1::EventController#show as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (11.7ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+Completed 200 OK in 47ms (Views: 19.5ms)
+
+
+Started GET "/api/v1/users/4/events/21/likes.json" for 192.168.219.128 at 2013-12-13 01:48:44 +0500
+Processing by Api::V1::LikeController#event_likes as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (11.7ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (50.8ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002'), :user_id=>4}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['$cmd'].find({"count"=>"likes", "query"=>{:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, "fields"=>nil}).limit(-1)
+MONGODB (15.6ms) taskfishmvp_a_development['likes'].find({:event_id=>BSON::ObjectId('52a6073fea39a40d18000002')})
+Completed 200 OK in 109ms (Views: 15.6ms)
+
+
+Started POST "/api/v1/users/4/events/21/comment.json" for 192.168.219.128 at 2013-12-13 01:48:59 +0500
+Processing by Api::V1::CommentController#create_event_comment as JSON
+  Parameters: {"user_id"=>"4", "event_id"=>"21"}
+MONGODB (11.0ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (12.0ms) taskfishmvp_a_development['events'].find({:id2=>21}).limit(-1)
+MONGODB (13.1ms) taskfishmvp_a_development['events'].update({:_id=>BSON::ObjectId('52a6073fea39a40d18000002')}, {"_id"=>BSON::ObjectId('52a6073fea39a40d18000002'), "title"=>"test1", "venue"=>"kkkkk", "event_date"=>2013-12-09 18:08:00 UTC, "latitude"=>37.785834, "longitude"=>-122.406417, "created_by_name"=>"Ruby Ruby", "attendant_profile_images"=>["http://pbs.twimg.com/profile_images/2141559681/554865_3251716484321_1009271954_32664883_335004350_n_normal.jpg"], "expire_at"=>2013-12-11 18:08:00 UTC, "user_ids"=>[BSON::ObjectId('52a41133ea39a40fa0000004'), BSON::ObjectId('52a4cf09ea39a41014000002')], "created_by_profile_picture"=>"http://graph.facebook.com/100007095040271/picture", "created_at"=>2013-12-09 18:09:03 UTC, "updated_at"=>2013-12-12 20:48:59 UTC, "id2"=>21, "user_id"=>BSON::ObjectId('52a41133ea39a40fa0000004'), :comments=>[{"_id"=>BSON::ObjectId('52a75ea9ea39a40fbc000003'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:17 UTC, "updated_at"=>2013-12-12 20:48:59 UTC}, {"_id"=>BSON::ObjectId('52a75eaeea39a40fbc000004'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:22 UTC, "updated_at"=>2013-12-12 20:48:59 UTC}, {"_id"=>BSON::ObjectId('52a75eb0ea39a40fbc000005'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-10 18:34:24 UTC, "updated_at"=>2013-12-12 20:48:59 UTC}, {"_id"=>BSON::ObjectId('52aa1f19ea39a40670000004'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-12 20:39:53 UTC, "updated_at"=>2013-12-12 20:48:59 UTC}, {"_id"=>BSON::ObjectId('52aa1fe7ea39a40670000005'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-12 20:43:19 UTC, "updated_at"=>2013-12-12 20:48:59 UTC}, {"_id"=>BSON::ObjectId('52aa209eea39a40670000006'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-12 20:46:22 UTC, "updated_at"=>2013-12-12 20:48:59 UTC}, {"_id"=>BSON::ObjectId('52aa20afea39a40670000007'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-12 20:46:39 UTC, "updated_at"=>2013-12-12 20:48:59 UTC}, {"_id"=>BSON::ObjectId('52aa213bea39a40670000008'), "user_id"=>4, "user_name"=>"Ruby Ruby", "created_at"=>2013-12-12 20:48:59 UTC, "updated_at"=>2013-12-12 20:48:59 UTC}], :pictures=>[{"_id"=>BSON::ObjectId('52aa0d96ea39a40e58000001'), "user_id"=>4, "title"=>"xyz", "created_at"=>2013-12-12 19:25:11 UTC, "updated_at"=>2013-12-12 20:48:59 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_001.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}, {"_id"=>BSON::ObjectId('52aa0eaeea39a40e58000002'), "user_id"=>4, "title"=>"xyz", "created_at"=>2013-12-12 19:29:50 UTC, "updated_at"=>2013-12-12 20:48:59 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_002.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}, {"_id"=>BSON::ObjectId('52aa188cea39a40670000001'), "user_id"=>4, "title"=>"xyz", "image_url"=>"http://s3.amazonaws.com/taskfishmvp-a/pictures/avatars//original/photo_003.jpg", "created_at"=>2013-12-12 20:11:56 UTC, "updated_at"=>2013-12-12 20:48:59 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_003.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}, {"_id"=>BSON::ObjectId('52aa1931ea39a40670000002'), "user_id"=>4, "title"=>"xyz", "image_url"=>"http://s3.amazonaws.com/taskfishmvp-a/pictures/avatars//original/photo_004.jpg", "created_at"=>2013-12-12 20:14:41 UTC, "updated_at"=>2013-12-12 20:48:59 UTC, "event_id"=>"21", "avatar_file_name"=>"photo_004.jpg", "controller"=>"api/v1/picture", "action"=>"create", "format"=>"json", :comments=>[]}]})
+Completed 200 OK in 79ms (Views: 3.3ms)
+
+
+Started GET "/api/v1/users/4/events.json" for 192.168.219.128 at 2013-12-13 01:50:28 +0500
+Processing by Api::V1::EventController#index as JSON
+  Parameters: {"user_id"=>"4"}
+MONGODB (14.0ms) taskfishmvp_a_development['users'].find({:id2=>4}).limit(-1)
+MONGODB (63.2ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52a6073fea39a40d18000002')]}})
+Completed 200 OK in 105ms (Views: 87.7ms)

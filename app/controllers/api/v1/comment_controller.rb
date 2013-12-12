@@ -11,7 +11,7 @@ module Api
 
         if event
           comment = Comment.new
-          comment.text = params[:comment]
+          comment.comment_text = params[:comment]
           comment.user_id = user.id2
           comment.user_name = user.name
           comment.save
@@ -54,7 +54,7 @@ module Api
 
         if event
           comment = Comment.new
-          comment.text = params[:comment]
+          comment.comment_text = params[:comment]
           comment.user_id = user.id2
           comment.user_name = user.name
           comment.save

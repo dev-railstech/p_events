@@ -1,6 +1,6 @@
 class Picture
 
-  include MongoMapper::Document
+  include MongoMapper::EmbeddedDocument
   include Paperclip::Glue
 
 
@@ -11,11 +11,13 @@ class Picture
   key :longitude , Float
   key :last_comment_id , Integer
 
+  key :image_url , String
+
   timestamps!
 
-  auto_increment!
+  #auto_increment!
 
-  many :comments, :as => :commentable
+  many :comments
   belongs_to :event
 
   has_attached_file :avatar
