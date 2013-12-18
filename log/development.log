@@ -8232,3 +8232,7 @@ MONGODB (12.7ms) taskfishmvp_a_development['events'].find({:id2=>35}).limit(-1)
 Completed 200 OK in 36ms (Views: 5.1ms)
 MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
 MONGODB (514.2ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (1931.8ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (254.2ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
