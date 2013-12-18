@@ -56,25 +56,28 @@ module Api
         user = User.find_by_id2 params[:user_id].to_i
 
        if user.present?
-          @event = Event.new
-          @event.title = params[:title]
-          @event.venue = params[:venue]
-          @event.event_date = Time.parse(params[:event_date])
-          @event.latitude = params[:latitude]
-          @event.longitude = params[:longitude]
-          @event.created_by_name = user.name
-          @event.created_by_profile_picture = user.profile_image_url
-          @event.user = user
-          @event.users << user
-          @event.expire_at = Time.parse(params[:event_date]) + params[:expire_after].to_i.hours
+
+          event = Event.new(params)
+          #@event.title = params[:title]
+          #@event.venue = params[:venue]
+          #@event.event_date = Time.parse(params[:event_date])
+          #@event.latitude = params[:latitude]
+          #@event.longitude = params[:longitude]
+          #@event.save
+          #binding.pry
+          event.created_by_name = user.name
+          event.created_by_profile_picture = user.profile_image_url
+          event.user = user
+          event.users << user
+          event.expire_at = Time.parse(params[:event_date]) + params[:expire_after].to_i.hours
+          #@event.cover_photo = @event.cover_pic
+          event.save
+          event.cover_photo = event.cover_pic
+          event.save
           respond_to do |format|
-            if @event.save
-              user.events << @event
+              user.events << event
               user.save
-              format.json { render :json => @event }
-            else
-              format.json { render :json => { :message => 'Invalid data' , :status => 123 } }
-            end
+              format.json { render :json => event }
           end
         else
           respond_to do |format|
@@ -102,6 +105,7 @@ module Api
             else
               #binding.pry
               #use mailer to send invitation email alongwith app link
+              Notifier.invitation(user,params[:email],event).deliver
             end
 
           event.save

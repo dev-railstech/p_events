@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/app/models/event.rb" line="33" />
+    <bookmark url="file://$PROJECT_DIR$/app/models/event.rb" line="41" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23f49944-740f-4121-a6cc-d39e4b8411bf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/comment.rb" afterPath="$PROJECT_DIR$/app/models/comment.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/v1/comment_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/v1/comment_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/notifier/invitation.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environment.rb" afterPath="$PROJECT_DIR$/config/environment.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/event.rb" afterPath="$PROJECT_DIR$/app/models/event.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/picture.rb" afterPath="$PROJECT_DIR$/app/models/picture.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/v1/picture_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/v1/picture_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/v1/event_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/v1/event_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TaskFishMVP-Service.iws" />
@@ -34,46 +34,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <file leaf-file-name="notifier.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/mailers/notifier.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="2" selection-start="1448" selection-end="1448" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1513">
+            <state line="3" column="0" selection-start="77" selection-end="77" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="picture_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/picture_controller.rb">
+      <file leaf-file-name="event_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/event_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="19" selection-start="1338" selection-end="1338" vertical-scroll-proportion="0.0" vertical-offset="363" max-vertical-offset="1530">
+            <state line="110" column="31" selection-start="3199" selection-end="3199" vertical-scroll-proportion="0.0" vertical-offset="1301" max-vertical-offset="2669">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="event.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="event.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/event.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="16" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0" vertical-offset="211" max-vertical-offset="1139">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="comment.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="invitation.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/notifier/invitation.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="110" selection-start="246" selection-end="246" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="289">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comment_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/comment_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="6" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.0" vertical-offset="634" max-vertical-offset="1700">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="environment.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/environment.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="1" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comment.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="28" selection-start="155" selection-end="155" vertical-scroll-proportion="0.16012558" vertical-offset="0" max-vertical-offset="637">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="like.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/like.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="23" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+            <state line="8" column="52" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="323">
               <folding />
             </state>
           </provider>
@@ -82,16 +100,7 @@
       <file leaf-file-name="picture.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/picture.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="16" selection-start="359" selection-end="359" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="like_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/like_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="5" selection-start="1471" selection-end="1471" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="867">
+            <state line="8" column="65" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="595">
               <folding />
             </state>
           </provider>
@@ -109,16 +118,7 @@
       <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/user.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="59" selection-start="874" selection-end="874" vertical-scroll-proportion="0.0" vertical-offset="411" max-vertical-offset="1088">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="comment_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/comment_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="26" selection-start="1515" selection-end="1515" vertical-scroll-proportion="0.0" vertical-offset="634" max-vertical-offset="1700">
+            <state line="4" column="2" selection-start="70" selection-end="70" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="1105">
               <folding />
             </state>
           </provider>
@@ -145,14 +145,17 @@
         <option value="$PROJECT_DIR$/app/controllers/api/v1/like_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/v1/user_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/api/v1/event_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/v1/picture_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/like.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/v1/comment_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/event.rb" />
         <option value="$PROJECT_DIR$/app/models/picture.rb" />
         <option value="$PROJECT_DIR$/app/models/comment.rb" />
+        <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/app/models/event.rb" />
+        <option value="$PROJECT_DIR$/config/environment.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/api/v1/event_controller.rb" />
+        <option value="$PROJECT_DIR$/app/mailers/notifier.rb" />
+        <option value="$PROJECT_DIR$/app/views/notifier/invitation.html.erb" />
       </list>
     </option>
   </component>
@@ -188,6 +191,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TaskFishMVP-Service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scope" />
       <pane id="RailsProjectView">
         <subPane>
@@ -211,8 +224,8 @@
               <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Config" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.ConfigFolderNode" />
+              <option name="myItemId" value="app/mailers" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.MinorFolderWithDoubleNameNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -261,22 +274,20 @@
               <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.ApplicationFolderNode" />
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.ControllersFolderNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ApplicationController" />
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.ControllersSubFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="v1" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.folders.ControllersSubFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EventController" />
               <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.ControllerClassNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TaskFishMVP-Service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -302,6 +313,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
+    <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="RSpecRunConfigurationType" factoryName="RSpec">
@@ -385,7 +397,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -401,11 +413,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -423,25 +435,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/picture_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="74" selection-start="1696" selection-end="1696" vertical-scroll-proportion="0.0" vertical-offset="1071" max-vertical-offset="1445" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/user_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="27" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1207" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/event_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="40" selection-start="2097" selection-end="2097" vertical-scroll-proportion="0.0" vertical-offset="1207" max-vertical-offset="2533" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/like_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="25" selection-start="1451" selection-end="1451" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="867" />
@@ -642,16 +639,21 @@
         <state line="39" column="21" selection-start="1511" selection-end="1511" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="1360" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/like_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="59" selection-start="874" selection-end="874" vertical-scroll-proportion="0.0" vertical-offset="411" max-vertical-offset="1088">
+        <state line="45" column="5" selection-start="1471" selection-end="1471" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="867" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/like.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="23" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/event_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="49" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2601">
+        <state line="8" column="52" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
           <folding />
         </state>
       </provider>
@@ -663,51 +665,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/like_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="5" selection-start="1471" selection-end="1471" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="867">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/like.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="23" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/picture_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="19" selection-start="1338" selection-end="1338" vertical-scroll-proportion="0.0" vertical-offset="363" max-vertical-offset="1530">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/comment_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="26" selection-start="1515" selection-end="1515" vertical-scroll-proportion="0.0" vertical-offset="634" max-vertical-offset="1700">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/event.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="16" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0" vertical-offset="211" max-vertical-offset="1139">
+        <state line="49" column="22" selection-start="1318" selection-end="1318" vertical-scroll-proportion="0.0" vertical-offset="344" max-vertical-offset="1530">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/picture.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="16" selection-start="359" selection-end="359" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
+        <state line="8" column="65" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/comment_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="28" selection-start="155" selection-end="155" vertical-scroll-proportion="0.16012558" vertical-offset="0" max-vertical-offset="637">
+        <state line="39" column="6" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.0" vertical-offset="634" max-vertical-offset="1700">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="1" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="2" selection-start="70" selection-end="70" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/event_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="110" column="31" selection-start="3199" selection-end="3199" vertical-scroll-proportion="0.0" vertical-offset="1301" max-vertical-offset="2669">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/mailers/notifier.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="77" selection-end="77" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/notifier/invitation.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="110" selection-start="246" selection-end="246" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="289">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/event.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
           <folding />
         </state>
       </provider>

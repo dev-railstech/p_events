@@ -1,6 +1,7 @@
 class Event
 
   include MongoMapper::Document
+  include Paperclip::Glue
 
   key :title , String , :required => true
   key :venue , String
@@ -19,6 +20,8 @@ class Event
 
   key :created_by_profile_picture
 
+  key :cover_photo , String
+
   timestamps!
 
   auto_increment!
@@ -28,9 +31,14 @@ class Event
   many :comments
   many :pictures
 
+  has_attached_file :cover_pic
+
+  key :cover_pic_file_name, String
+
   scope :active , where(:expire_at.gte => Time.now )
 
   belongs_to :user
+
   many :likes
 
   def expire_after

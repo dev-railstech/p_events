@@ -1,6 +1,7 @@
 class User
 
   include MongoMapper::Document
+  include Paperclip::Glue
 
   key :name , String , :required => true
   key :age , Integer , :numeric => true
