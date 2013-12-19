@@ -5,6 +5,7 @@ class Picture
 
 
   key :user_id , Integer , :required => true
+  key :user_name , String
   key :title , String , :required => true
   key :description , String
   key :latitude , Float

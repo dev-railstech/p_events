@@ -38,11 +38,14 @@ module Api
       def create
 
         event = Event.find_by_id2 params[:event_id].to_i
+        user = User.find_by_id2 params[:user_id].to_i
 
         response = { :message => 'An unknown error prohibits saving this picture' , :status => 116 }
 
         if event.present?
           picture = Picture.new(params)
+          picture.user_name = user.name
+
           picture.save
           picture.image_url = picture.avatar
           picture.save
