@@ -3,9 +3,9 @@ class Picture
   include MongoMapper::EmbeddedDocument
   include Paperclip::Glue
 
-
   key :user_id , Integer , :required => true
   key :user_name , String
+  key :created_by_profile_picture , String
   key :title , String , :required => true
   key :description , String
   key :latitude , Float
@@ -16,15 +16,14 @@ class Picture
 
   timestamps!
 
-  #auto_increment!
-
   many :comments
+
+  many :likes
+
   belongs_to :event
 
   has_attached_file :avatar
 
   key :avatar_file_name, String
-                         #   :storage        => :s3,
-                          #  :s3_credentials => File.join(Rails.root, 'config', 's3.yml')
 
 end

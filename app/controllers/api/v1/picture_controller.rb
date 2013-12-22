@@ -45,7 +45,7 @@ module Api
         if event.present?
           picture = Picture.new(params)
           picture.user_name = user.name
-
+          picture.created_by_profile_picture = user.profile_image_url
           picture.save
           picture.image_url = picture.avatar
           picture.save
