@@ -102,6 +102,7 @@ module Api
               event.users << user_invited
               event.attendant_profile_images << user_invited.profile_image_url
               user_invited.save
+              Notifier.notify_user(user,params[:email],event).deliver
             else
               #binding.pry
               #use mailer to send invitation email alongwith app link
