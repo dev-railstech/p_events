@@ -7,8 +7,9 @@ module Api
         user = User.find_by_id2 params[:user_id].to_i
 
         response = { :message => 'Failed to fetch events for specified user' , :status => 104 }
-
+        #binding.pry
         if user.present?
+          #response = Event.where(:user_id => user.id, :expire_at.gt => Time.now)
           response = user.get_all_events
         end
 

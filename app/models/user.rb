@@ -49,7 +49,7 @@ class User
   many :events  , :in => :event_ids
 
   def get_all_events
-    self.events
+    self.events.map {|event| event if event.expire_at > Time.now }.compact
   end
 
   def get_active_events
