@@ -15,6 +15,9 @@ gem "paperclip"
 gem 'aws-sdk'
 #gem "aws-s3" , :require => "aws/s3"
 
+gem 'delayed_job'
+#gem 'delayed_job_mongo_mapper'
+
 group :development do
   gem 'pry'
 end

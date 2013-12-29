@@ -34,6 +34,45 @@ module Api
 
       end
 
+      def stats
+
+        user = User.find_by_id2 params[:user_id].to_i
+        event = Event.find_by_id2 params[:event_id].to_i
+
+        response = { :message => 'Failed to fetch event by specified event id' , :status => 109 }
+
+        if event.present?
+          statistics = { event: event}
+          statistics[:total_participants] = event.users.length
+          male_participants = 0
+          event.users.each {|u| male_participants = male_participants + 1 if u.sex == "male" }
+          statistics[:male_participants] = male_participants
+          statistics[:female_participants] = event.users.length - male_participants
+          response = statistics
+        end
+
+        respond_to do |format|
+          format.json { render :json => response }
+        end
+
+      end
+
+      def post
+        user = User.find_by_id2 params[:user_id].to_i
+        event = Event.find_by_id2 params[:event_id].to_i
+        post_id = params[:post_id]
+
+        event_post = event.pictures.select{|e| e if e.id.to_s == post_id }
+        p_like = event_post.first.likes.select{|l| l if l.user_id == user.id.to_s }
+
+        response = { post: event_post.first , liked: p_like.present? }
+        respond_to do |format|
+          format.json { render :json => response }
+        end
+
+
+      end
+
       def remove
 
         user = User.find_by_id2 params[:user_id].to_i

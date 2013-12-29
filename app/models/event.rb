@@ -5,6 +5,7 @@ class Event
 
   key :title , String , :required => true
   key :venue , String
+  key :event_location , String
   key :event_date , Time
   key :latitude , Float
   key :longitude , Float
