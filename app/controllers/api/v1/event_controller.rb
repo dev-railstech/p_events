@@ -91,6 +91,28 @@ module Api
 
       end
 
+      def im_in
+        user = User.find_by_id2 params[:user_id].to_i
+        event = Event.find_by_id2 params[:event_id].to_i
+        event.im_in << user.id2 unless event.im_in.include?(user.id2)
+        event.save
+        response = { :message => 'User step into event successfully' , :status => 200 }
+        respond_to do |format|
+          format.json { render :json => response }
+        end
+      end
+
+      def im_out
+        user = User.find_by_id2 params[:user_id].to_i
+        event = Event.find_by_id2 params[:event_id].to_i
+        event.im_in.delete(user.id2)
+        event.save
+        response = { :message => 'User out of event successfully' , :status => 200 }
+        respond_to do |format|
+          format.json { render :json => response }
+        end
+      end
+
       def create
 
         user = User.find_by_id2 params[:user_id].to_i
@@ -111,7 +133,9 @@ module Api
           event.users << user
           event.expire_at = Time.parse(params[:event_date]) + params[:expire_after].to_i.hours
           #@event.cover_photo = @event.cover_pic
+          event.im_in << user.id2
           event.save
+
           event.cover_photo = event.cover_pic
           event.save
           respond_to do |format|

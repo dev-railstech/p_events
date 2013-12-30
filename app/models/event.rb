@@ -19,6 +19,8 @@ class Event
 
   key :user_ids , Array
 
+  key :im_in , Array
+
   key :created_by_profile_picture
 
   key :cover_photo , String
