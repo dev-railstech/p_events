@@ -25,5 +25,4 @@ class Picture
   has_attached_file :avatar
 
   key :avatar_file_name, String
-
 end

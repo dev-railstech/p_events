@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23f49944-740f-4121-a6cc-d39e4b8411bf" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/picture.rb" afterPath="$PROJECT_DIR$/app/models/picture.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/schedular.rake" afterPath="$PROJECT_DIR$/lib/tasks/schedular.rake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TaskFishMVP-Service.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,7 +35,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="1" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071">
+            <state line="19" column="1" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1071">
               <folding />
             </state>
           </provider>
@@ -40,7 +44,25 @@
       <file leaf-file-name="schedular.rake" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/tasks/schedular.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="24" selection-start="157" selection-end="157" vertical-scroll-proportion="0.08279221" vertical-offset="0" max-vertical-offset="616">
+            <state line="11" column="79" selection-start="361" selection-end="361" vertical-scroll-proportion="0.29356357" vertical-offset="0" max-vertical-offset="637">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="86" selection-start="899" selection-end="899" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1122">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="picture.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/picture.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="24" selection-start="510" selection-end="510" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
               <folding />
             </state>
           </provider>
@@ -55,19 +77,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="event_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/event_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="177" column="14" selection-start="5603" selection-end="5657" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3859">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="notifier.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/mailers/notifier.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="18" selection-start="416" selection-end="428" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+            <state line="19" column="18" selection-start="416" selection-end="428" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="561">
               <folding />
             </state>
           </provider>
@@ -76,16 +89,7 @@
       <file leaf-file-name="event_expiry.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/notifier/event_expiry.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="339" selection-start="365" selection-end="365" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="187">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="46" selection-start="934" selection-end="934" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1122">
+            <state line="2" column="339" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="187">
               <folding />
             </state>
           </provider>
@@ -140,7 +144,6 @@
         <option value="$PROJECT_DIR$/app/controllers/api/v1/user_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/v1/comment_controller.rb" />
         <option value="$PROJECT_DIR$/config/environment.rb" />
-        <option value="$PROJECT_DIR$/app/models/picture.rb" />
         <option value="$PROJECT_DIR$/app/models/like.rb" />
         <option value="$PROJECT_DIR$/app/models/comment.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/v1/picture_controller.rb" />
@@ -153,6 +156,7 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/models/event.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/app/models/picture.rb" />
         <option value="$PROJECT_DIR$/lib/tasks/schedular.rake" />
       </list>
     </option>
@@ -189,6 +193,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="RailsProjectView">
         <subPane>
           <PATH>
@@ -281,7 +286,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -410,7 +414,6 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32880846" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15565345" sideWeight="0.6710311" order="0" side_tool="false" content_ui="combo" />
@@ -421,10 +424,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32880846" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -633,11 +637,6 @@
         <state line="3" column="10" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/picture.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="39" selection-start="152" selection-end="195" vertical-scroll-proportion="0.16012558" vertical-offset="0" max-vertical-offset="637" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
@@ -653,13 +652,6 @@
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="67" selection-start="851" selection-end="851" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1649">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/picture_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="8" selection-start="1497" selection-end="1587" vertical-scroll-proportion="0.0" vertical-offset="590" max-vertical-offset="2618">
           <folding />
         </state>
       </provider>
@@ -680,7 +672,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/notifier/event_expiry.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="339" selection-start="365" selection-end="365" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="187">
+        <state line="2" column="339" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="187">
           <folding />
         </state>
       </provider>
@@ -706,23 +698,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/picture_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="26" selection-start="1588" selection-end="1588" vertical-scroll-proportion="0.58766234" vertical-offset="590" max-vertical-offset="2618" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/picture.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="24" selection-start="510" selection-end="510" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/event.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="42" selection-start="777" selection-end="777" vertical-scroll-proportion="0.5551948" vertical-offset="372" max-vertical-offset="1394">
+        <state line="49" column="4" selection-start="870" selection-end="870" vertical-scroll-proportion="0.7237049" vertical-offset="372" max-vertical-offset="1394">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="46" selection-start="934" selection-end="934" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1122">
+        <state line="40" column="86" selection-start="899" selection-end="899" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1122">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/tasks/schedular.rake">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="24" selection-start="157" selection-end="157" vertical-scroll-proportion="0.08279221" vertical-offset="0" max-vertical-offset="616">
+        <state line="11" column="79" selection-start="361" selection-end="361" vertical-scroll-proportion="0.29356357" vertical-offset="0" max-vertical-offset="637">
           <folding />
         </state>
       </provider>
