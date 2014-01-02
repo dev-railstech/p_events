@@ -18757,3 +18757,9 @@ Processing by Api::V1::EventController#index as JSON
 MONGODB (14.5ms) taskfishmvp_a_development['users'].find({:id2=>6}).limit(-1)
 MONGODB (14.5ms) taskfishmvp_a_development['events'].find({:_id=>{:$in=>[BSON::ObjectId('52c0212cea39a407f0000002'), BSON::ObjectId('52c049ffea39a40dcc000001'), BSON::ObjectId('52c19d0bea39a40cb0000001'), BSON::ObjectId('52c1a401ea39a40cb0000002'), BSON::ObjectId('52c1b0b3ea39a40cb0000006')]}})
 Completed 200 OK in 58ms (Views: 25.5ms)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (11.0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (11.0ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)
+MONGODB [DEBUG] Logging level is currently :debug which could negatively impact client-side performance. You should set your logging level no lower than :info in production.
+MONGODB (541.8ms) admin['$cmd'].find({:ismaster=>1}).limit(-1)

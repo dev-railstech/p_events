@@ -94,7 +94,10 @@ module Api
       def im_in
         user = User.find_by_id2 params[:user_id].to_i
         event = Event.find_by_id2 params[:event_id].to_i
-        event.im_in << user.id2 unless event.im_in.include?(user.id2)
+        unless event.im_in.include?(user.id2)
+          event.im_in << user.id2
+          event.attendant_profile_images << user.profile_image_url
+        end
         event.save
         response = { :message => 'User step into event successfully' , :status => 200 }
         respond_to do |format|
@@ -106,6 +109,7 @@ module Api
         user = User.find_by_id2 params[:user_id].to_i
         event = Event.find_by_id2 params[:event_id].to_i
         event.im_in.delete(user.id2)
+        event.attendant_profile_images.delete(user.profile_image_url)
         event.save
         response = { :message => 'User out of event successfully' , :status => 200 }
         respond_to do |format|
@@ -134,6 +138,7 @@ module Api
           event.expire_at = Time.parse(params[:event_date]) + params[:expire_after].to_i.hours
           #@event.cover_photo = @event.cover_pic
           event.im_in << user.id2
+          event.attendant_profile_images << user.profile_image_url
           event.save
 
           event.cover_photo = event.cover_pic
@@ -164,7 +169,7 @@ module Api
             if user_invited.present?
               user_invited.events << event
               event.users << user_invited
-              event.attendant_profile_images << user_invited.profile_image_url
+              #event.attendant_profile_images << user_invited.profile_image_url
               user_invited.save
               Notifier.notify_user(user,params[:email],event).deliver
             else
