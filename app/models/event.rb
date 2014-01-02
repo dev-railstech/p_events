@@ -13,6 +13,8 @@ class Event
   key :last_picture_id , Integer
   key :created_by_name , String
 
+  key :is_active , Boolean , :default => true
+
   key :attendant_profile_images , Array
 
   key :expire_at , Time
@@ -38,7 +40,9 @@ class Event
 
   key :cover_pic_file_name, String
 
-  scope :active , where(:expire_at.gte => Time.now )
+  #scope :active , where(:expire_at.gte => Time.now )
+  scope :active , where(:is_active => true )
+
 
   belongs_to :user
 

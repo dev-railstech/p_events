@@ -16,4 +16,12 @@ class Notifier < ActionMailer::Base
           :subject => "Event invitation from #{@user.name}"  )
 
   end
+
+  def event_expiry(user,event)
+    @event = event
+    @user = user
+    mail( :to => user.email,
+          :subject => "Your event Expired"  )
+  end
+
 end

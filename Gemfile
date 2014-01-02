@@ -13,10 +13,11 @@ gem 'rb-readline', '~> 0.4.2'
 
 gem "paperclip"
 gem 'aws-sdk'
-#gem "aws-s3" , :require => "aws/s3"
 
 gem 'delayed_job'
 #gem 'delayed_job_mongo_mapper'
+
+#gem 'whenever', :require => false
 
 group :development do
   gem 'pry'
