@@ -15,13 +15,15 @@ class Event
 
   key :is_active , Boolean , :default => true
 
-  key :attendant_profile_images , Array
+
 
   key :expire_at , Time
 
   key :user_ids , Array
 
   key :im_in , Array
+  key :attendant_profile_images , Array
+  key :im_in_names , Array
 
   key :created_by_profile_picture
 

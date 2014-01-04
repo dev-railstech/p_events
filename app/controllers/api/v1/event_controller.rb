@@ -97,6 +97,7 @@ module Api
         unless event.im_in.include?(user.id2)
           event.im_in << user.id2
           event.attendant_profile_images << user.profile_image_url
+          event.im_in_names << user.name
         end
         event.save
         response = { :message => 'User step into event successfully' , :status => 200 }
@@ -105,11 +106,12 @@ module Api
         end
       end
 
-      def im_out
+      def im_out                                            s
         user = User.find_by_id2 params[:user_id].to_i
         event = Event.find_by_id2 params[:event_id].to_i
         event.im_in.delete(user.id2)
         event.attendant_profile_images.delete(user.profile_image_url)
+        event.im_in_names.delete(user.name)
         event.save
         response = { :message => 'User out of event successfully' , :status => 200 }
         respond_to do |format|
