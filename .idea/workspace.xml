@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23f49944-740f-4121-a6cc-d39e4b8411bf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/event.rb" afterPath="$PROJECT_DIR$/app/models/event.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/v1/event_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/v1/event_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TaskFishMVP-Service.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,7 +49,7 @@
       <file leaf-file-name="event_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/event_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="108" column="61" selection-start="3264" selection-end="3264" vertical-scroll-proportion="0.65584415" vertical-offset="1432" max-vertical-offset="3893">
+            <state line="143" column="40" selection-start="4612" selection-end="4612" vertical-scroll-proportion="0.5714286" vertical-offset="2079" max-vertical-offset="3910">
               <folding />
             </state>
           </provider>
@@ -696,13 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="86" selection-start="899" selection-end="899" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1122">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/tasks/schedular.rake">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="79" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
@@ -717,16 +708,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="86" selection-start="899" selection-end="899" vertical-scroll-proportion="0.9466248" vertical-offset="77" max-vertical-offset="1122">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/event.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="18" selection-start="518" selection-end="518" vertical-scroll-proportion="0.50549453" vertical-offset="103" max-vertical-offset="1428">
+        <state line="26" column="5" selection-start="527" selection-end="527" vertical-scroll-proportion="0.5321821" vertical-offset="103" max-vertical-offset="1428">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/event_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="61" selection-start="3264" selection-end="3264" vertical-scroll-proportion="0.65584415" vertical-offset="1432" max-vertical-offset="3893">
+        <state line="143" column="40" selection-start="4612" selection-end="4612" vertical-scroll-proportion="0.5714286" vertical-offset="2079" max-vertical-offset="3910">
           <folding />
         </state>
       </provider>

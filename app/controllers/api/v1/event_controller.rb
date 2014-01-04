@@ -141,6 +141,7 @@ module Api
           #@event.cover_photo = @event.cover_pic
           event.im_in << user.id2
           event.attendant_profile_images << user.profile_image_url
+          event.im_in_names << user.name
           event.save
 
           event.cover_photo = event.cover_pic
