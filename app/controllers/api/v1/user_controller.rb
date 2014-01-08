@@ -64,9 +64,9 @@ module Api
       end
 
       def show
-        user = User.find_by_id2 params[:id].to_s
+        user = User.find_by_id2 params[:id].to_i
         respond_to do |format|
-          format.json { render :json =>user }
+          format.json { render :json => user }
         end
       end
 
