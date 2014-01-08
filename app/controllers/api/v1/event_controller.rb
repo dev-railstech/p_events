@@ -153,6 +153,7 @@ module Api
           respond_to do |format|
               user.events << event
               user.created_count = user.created_count + 1
+              user.attended_count = user.attended_count + 1
               user.save
               format.json { render :json => event }
           end
