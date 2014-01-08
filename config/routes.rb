@@ -5,6 +5,7 @@ TaskfishmvpA::Application.routes.draw do
     namespace :v1 do
 
       post 'users/create' => 'user#create'
+      get 'users/:id' => 'user#show'
 
       get 'users/:user_id/events' => 'event#index'
       get 'users/:user_id/events/:event_id' => 'event#show'

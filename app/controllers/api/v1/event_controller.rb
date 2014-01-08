@@ -98,6 +98,8 @@ module Api
           event.im_in << user.id2
           event.attendant_profile_images << user.profile_image_url
           event.im_in_names << user.name
+          user.attended_count = user.attended_count + 1
+          user.save
         end
         event.save
         response = { :message => 'User step into event successfully' , :status => 200 }
@@ -113,6 +115,8 @@ module Api
         event.attendant_profile_images.delete(user.profile_image_url)
         event.im_in_names.delete(user.name)
         event.save
+        user.attended_count = user.attended_count - 1
+        user.save
         response = { :message => 'User out of event successfully' , :status => 200 }
         respond_to do |format|
           format.json { render :json => response }
@@ -148,6 +152,7 @@ module Api
           event.save
           respond_to do |format|
               user.events << event
+              user.created_count = user.created_count + 1
               user.save
               format.json { render :json => event }
           end
@@ -172,6 +177,7 @@ module Api
             if user_invited.present?
               user_invited.events << event
               event.users << user_invited
+              user_invited.invited_count = user_invited.invited_count + 1
               #event.attendant_profile_images << user_invited.profile_image_url
               user_invited.save
               Notifier.notify_user(user,params[:email],event).deliver

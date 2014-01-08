@@ -30,6 +30,10 @@ class User
 
   key :event_ids , Array
 
+  key :invites_count , :default => 0
+  key :attended_count , :default => 0
+  key :created_count , :default => 0
+
   validates_uniqueness_of :email
 
   validate :access_token_presence

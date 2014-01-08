@@ -63,6 +63,13 @@ module Api
 
       end
 
+      def show
+        user = User.find_by_id2 params[:id].to_s
+        respond_to do |format|
+          format.json { render :json =>user }
+        end
+      end
+
       def health
         render :text => 'hellow hwe OK werguhew'
       end
