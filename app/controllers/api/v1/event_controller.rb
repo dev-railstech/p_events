@@ -43,7 +43,7 @@ module Api
 
         if event.present?
           statistics = { event: event}
-          statistics[:total_participants] = event.users.length
+          statistics[:total_participants] = event.im_in.length
           male_participants = 0
           event.users.each {|u| male_participants = male_participants + 1 if u.sex == "male" }
           statistics[:male_participants] = male_participants
