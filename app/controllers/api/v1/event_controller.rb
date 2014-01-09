@@ -178,7 +178,7 @@ module Api
             if user_invited.present?
               user_invited.events << event
               event.users << user_invited
-              user_invited.invited_count = user_invited.invited_count + 1
+              user_invited.invites_count = user_invited.invites_count + 1
               #event.attendant_profile_images << user_invited.profile_image_url
               user_invited.save
               Notifier.notify_user(user,params[:email],event).deliver
