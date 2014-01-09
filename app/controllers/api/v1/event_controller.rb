@@ -45,7 +45,10 @@ module Api
           statistics = { event: event}
           statistics[:total_participants] = event.im_in.length
           male_participants = 0
-          event.users.each {|u| male_participants = male_participants + 1 if u.sex == "male" }
+          event.im_in.each do |u|
+            u = User.find_by_id2 u.to_i
+            male_participants = male_participants + 1 if u.sex == "male"
+          end
           statistics[:male_participants] = male_participants
           statistics[:female_participants] = event.users.length - male_participants
           response = statistics
