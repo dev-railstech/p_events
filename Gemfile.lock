@@ -121,6 +121,7 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
+    pg (0.17.0-x86-mingw32)
     plucky (0.6.6)
       mongo (~> 1.5)
     polyglot (0.3.3)
@@ -204,6 +205,7 @@ DEPENDENCIES
   omniauth-facebook
   omniauth-twitter
   paperclip
+  pg
   pry
   rails (= 4.0.2)
   rb-readline (~> 0.4.2)
