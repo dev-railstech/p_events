@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/taskfish.iml" filepath="$PROJECT_DIR$/.idea/taskfish.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/TaskFishMVP-Service.iml" filepath="$PROJECT_DIR$/.idea/TaskFishMVP-Service.iml" />
+>>>>>>> ab3a1b4d750487c36c0c7c0ddfbf8127043a4159
     </modules>
   </component>
 </project>

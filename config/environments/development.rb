@@ -22,8 +22,17 @@ Taskfish::Application.configure do
   # Raise an error on page load if there are pending migrations
   config.active_record.migration_error = :page_load
 
+
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+  config.paperclip_defaults = {
+      :storage => :s3,
+      :s3_credentials => {
+          :bucket => 'taskfishmvp-a',
+          :access_key_id => 'AKIAJXLQUJV5SNTUN3RA',
+          :secret_access_key => '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'
+      }
+  }
 end

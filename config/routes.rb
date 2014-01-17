@@ -8,7 +8,6 @@ Taskfish::Application.routes.draw do
 
   get "/auth/:provider/callback" => "sessions#create"
   get "/signout" => "sessions#destroy", :as => :signout
-
   namespace :api do
     namespace :v1 do
 
@@ -24,7 +23,6 @@ Taskfish::Application.routes.draw do
       get 'users/:user_id/events/:event_id/stats' => 'event#stats'
       get 'users/:user_id/events/:event_id/im_in' => 'event#im_in'
       get 'users/:user_id/events/:event_id/im_out' => 'event#im_out'
-
       post 'users/:user_id/events/:event_id/comment' => 'comment#create_event_comment'
       get 'users/:user_id/events/:event_id/comments' => 'comment#get_event_comments'
       post 'users/:user_id/events/:event_id/pictures/:picture_id/comment' => 'comment#create_picture_comment'

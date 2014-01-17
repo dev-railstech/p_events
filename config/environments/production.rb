@@ -1,4 +1,5 @@
 Taskfish::Application.configure do
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -77,4 +78,12 @@ Taskfish::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+  config.paperclip_defaults = {
+      :storage => :s3,
+      :s3_credentials => {
+          :bucket => 'taskfishmvp-a',
+          :access_key_id => 'AKIAJXLQUJV5SNTUN3RA',
+          :secret_access_key => '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'
+      }
+  }
 end
