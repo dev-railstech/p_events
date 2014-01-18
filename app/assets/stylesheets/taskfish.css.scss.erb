@@ -1,0 +1,114 @@
+.taskfish-content {
+  background-color: #444444;
+  min-height: 100%;
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+  background-color: #db6557;
+  position: relative;
+  bottom: 0px;
+}
+
+.header-logo{
+  margin-left: 15%;
+  float: left;
+}
+
+.header-available {
+  margin-right: 15%;
+  float: right;
+}
+
+.content {
+  width: 70%;
+  margin: auto;
+  min-height: 490px;
+  background-color: white;
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+  margin-top: -10px;
+  background-color: #B6B6B6;
+  position: relative;
+  bottom: 0px;
+  text-align: center;
+}
+
+.avl_badge{
+  height: 50px;
+  width: 140px;
+  margin-right: 14%;
+  margin-top: -30px;
+  float: right;
+  display: inline-block;
+}
+.top-align{
+  padding-top: 25px;
+}
+
+.detail-header {
+  width: 100%;
+  height: 300px;
+  .event-header-img {
+    width: 50%;
+    float: left;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .event-header-dtl {
+    width: 50%;
+    float: right;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.event-navigation {
+  height: 60px;
+  background-image: url("<%= asset_path('event_navigation_bg.gif') %>");
+  background-repeat: repeat-x;
+  width: 100%;
+  .navigation-link {
+    padding-top: 12px;
+    width: 24%;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+  }
+  .navigation-link:hover{
+      margin-left: 2px;
+      border: 1px solid white;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      background-color: white;
+      padding-bottom: 12px;
+      padding-top: 12px;
+      color: #db6557;
+      margin-top: 7px;
+  }
+  .navigation-link.active{
+      margin-left: 2px;
+      border: 1px solid white;
+      -webkit-border-radius: 60px;
+      -moz-border-radius: 60px;
+      background-color: white;
+      padding-bottom: 12px;
+      padding-top: 12px;
+      margin-top: 7px;
+      color: #64CCCC;
+  }
+}
+
+.event-content-area {
+    min-height: 300px;
+}
