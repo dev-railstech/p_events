@@ -177,20 +177,15 @@ module Api
 
         if event.present?
 
-            user_invited = User.find_by_email params[:email]
-            if user_invited.present?
-              user_invited.events << event
-              event.users << user_invited
-              user_invited.invites_count = user_invited.invites_count + 1
-              #event.attendant_profile_images << user_invited.profile_image_url
-              user_invited.save
-              Notifier.notify_user(user,params[:email],event).deliver
-            else
-              #binding.pry
-              #use mailer to send invitation email alongwith app link
-              Notifier.invitation(user,params[:email],event).deliver
-            end
-
+          user_invited = User.find_by_email params[:email]
+          if user_invited.present?
+            user_invited.events << event
+            event.users << user_invited
+            user_invited.invites_count = user_invited.invites_count + 1
+            #event.attendant_profile_images << user_invited.profile_image_url
+            user_invited.save
+          end
+          Notifier.invitation(user,params[:email],event).deliver
           event.save
           response = { :message => 'User invited successfully' , :status => 0 } if event.save
         end
