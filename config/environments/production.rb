@@ -86,4 +86,7 @@ Taskfish::Application.configure do
           :secret_access_key => '8+AXLbaqe+XhEPyj3ZzwJKXBve/GJGAk2eXqdYGr'
       }
   }
+
+  Rails.application.routes.default_url_options[:host] = 'taskfishmvp.herokuapp.com'
+
 end
