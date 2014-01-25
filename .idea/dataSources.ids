@@ -3,4 +3,10 @@
   <data-source source="LOCAL" name="Rails taskfish: development" uuid="d191c6ca-cae1-4cff-9239-c1abf5dfe3ef">
     <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
+  <data-source source="LOCAL" name="Rails sell_content: development" uuid="cd54c13c-d0f4-40ee-93df-a1417b7b8196">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails sell_content: test" uuid="86a1e364-41d2-4a63-b100-6a90fda53071">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
 </component>

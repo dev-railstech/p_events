@@ -183,6 +183,8 @@
     <orderEntry type="library" scope="PROVIDED" name="uglifier (v2.4.0, ruby-1.9.3-p392) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uuidtools (v2.1.4, ruby-1.9.3-p392) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="win32console (v1.3.2, ruby-1.9.3-p392) [gem]" level="application" />
+    <orderEntry type="module" module-name="sell_content" />
+    <orderEntry type="module" module-name="sell_content" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />

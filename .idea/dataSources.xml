@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2328612606">
+  <component name="DataSourceManagerImpl" format="xml" hash="3649667080">
     <data-source source="LOCAL" name="Rails taskfish: development" uuid="d191c6ca-cae1-4cff-9239-c1abf5dfe3ef">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:C:\Development\taskfish\db\development.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails sell_content: development" uuid="cd54c13c-d0f4-40ee-93df-a1417b7b8196">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Development\sell_content\db\development.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails sell_content: test" uuid="86a1e364-41d2-4a63-b100-6a90fda53071">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Development\sell_content\db\test.sqlite3</jdbc-url>
       <libraries />
     </data-source>
   </component>

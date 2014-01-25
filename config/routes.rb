@@ -2,7 +2,14 @@ Taskfish::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  resources :events
+  resources :events do
+    member do
+      get 'stream'
+      get 'gallery'
+      get 'location'
+      get 'stats'
+    end
+  end
 
   #resources :users do
   #  resources :events

@@ -1,0 +1,8 @@
+<%= render 'event_detail_header' %>
+<%= render 'event_navigation_bar',:active_tab => "stream" %>
+
+
+<div class="event-content-area">
+  Streaming
+  <h1><%= @event.title rescue "abcd" %></h1>
+</div>
