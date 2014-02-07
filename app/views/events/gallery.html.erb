@@ -3,6 +3,18 @@
 
 
 <div class="event-content-area">
-  gallery goes here
-  <h1><%= @event.title rescue "abcd" %></h1>
+  <br/>
+  &nbsp;<%= @event.pictures.length %> pictures
+  <br/><br/>
+  <div class="gallery">
+    <%= image_tag(@event.created_by_profile_picture, :class => 'gallery_img') %>
+    <%= image_tag(@event.created_by_profile_picture, :class => 'gallery_img') %>
+    <%= image_tag(@event.created_by_profile_picture, :class => 'gallery_img') %>
+    <%= image_tag(@event.created_by_profile_picture, :class => 'gallery_img') %>
+    <%= image_tag(@event.created_by_profile_picture, :class => 'gallery_img') %>
+    <%= image_tag(@event.created_by_profile_picture, :class => 'gallery_img') %>
+    <%= image_tag(@event.created_by_profile_picture, :class => 'gallery_img') %>
+
+  </div>
+
 </div>

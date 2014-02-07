@@ -1,12 +1,35 @@
 <div class="detail-header">
     <div class="half pull-left">
-       <div class="event-title"><%= @event.title %> dd dddd</div>
+       <div class="event-title"><%= @event.title %></div>
        <br/><br/><br/>
       <div class="event-timing"><%= @event.event_date %></div>
       <div class="event-venue"><%= @event.venue %></div>
 
     </div>
-    <div class="half pull-right padding-15">
-      wejkkrrrrrrrtrt4l5itj4nf  5tfu433 5u 6uu45 u6jtr  ytrjrel.yt46ut u etyu tr u  setse  teritujy y j tyuet yte  je nd  ituy uet jrej tk
+    <div class="half pull-right">
+      <div class="pull-left">
+        <%= image_tag(@event.created_by_profile_picture , :class => "round_img_lrg margin-20") %>
+
+      </div>
+      <div class="created_by">
+        By <br/><%= @event.created_by_name %>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="round_img_lrg margin-20 pull-left">
+        <%= @event.im_in.length %>
+      </div>
+
+      <div class="fish_in_the_party">
+        fish in the party: <br>
+        <% @event.attendant_profile_images.first(5).each do |attendant_img| %>
+          <%= image_tag(attendant_img,:class => "round_img") %>
+        <% end %>
+      </div>
+      <div class="clearfix"></div>
+      <div class="content_will_delete">
+        CONTENT WILL BE DELETED IN 4 HOURS AND 38 MINUTES
+      </div>
     </div>
 </div>

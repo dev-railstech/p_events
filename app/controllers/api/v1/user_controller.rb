@@ -7,7 +7,7 @@ module Api
           user = User.find_by_email(params[:email])
           if user.present?
             respond_to do |format|
-              format.json
+              format.json { render :json => user }
             end
           else
             user = User.new
@@ -44,11 +44,11 @@ module Api
 
             if user.save
               respond_to do |format|
-                format.json
+                format.json { render :json => user }
               end
             else
               respond_to do |format|
-                format.json
+                format.json { render :json => { :message => 'Invalid data',:status => 121} }
               end
             end
           end
@@ -56,7 +56,7 @@ module Api
         else
           response = { :message => 'Missing data',:status => 120}
           respond_to do |format|
-            format.json
+            format.json { render :json => response }
           end
         end
 
@@ -66,7 +66,7 @@ module Api
       def show
         user = User.find_by_id2 params[:id].to_i
         respond_to do |format|
-          format.json
+          format.json { render :json => user }
         end
       end
 

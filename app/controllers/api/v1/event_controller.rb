@@ -14,7 +14,7 @@ module Api
         end
 
         respond_to do |format|
-          format.json
+          format.json { render :json => response }
         end
 
       end
